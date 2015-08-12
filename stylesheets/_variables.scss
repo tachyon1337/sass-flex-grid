@@ -1,0 +1,55 @@
+//flex-grid
+$theme-flex-grid-background:#fff !default;
+$theme-flex-grid-font-color:initial !default;
+$theme-flex-grid-border:#dfdfdf !default;
+
+//flex-table
+$theme-flex-table-background:#fff !default;
+$theme-flex-table-font-color:initial !default;
+$theme-flex-table-border:#dfdfdf !default;
+
+//grid-pagination
+$theme-grid-pagination-background:#fff !default;
+$theme-grid-pagination-font-color:#787878 !default;
+$theme-grid-pagination-text-shadow:0 0 0 #787878 !default;
+$theme-grid-pagination-border:1px solid #dadada !default;
+$theme-grid-pagination-background-hover:#8ebc00 !default;
+$theme-grid-pagination-font-color-hover:#fff !default;
+$theme-grid-pagination-text-shadow-hover:0 0 0 #fff !default;
+$theme-grid-pagination-border-hover:1px solid #8ebc00 !default;
+$theme-grid-pagination-icon-color:#bbb !default;
+$theme-grid-pagination-icon-color-hover:#8ebc00 !default;
+
+$grid-column-gutter: 30px !default;
+
+
+
+//flex-grid
+@include component($component:css-flex-grid,$map:(
+        background:$theme-flex-grid-background,
+        font-color:$theme-flex-grid-font-color,
+        border:$theme-flex-grid-border
+));
+
+//flex-table
+@include component($component:css-flex-table,$map:(
+        background:$theme-flex-table-background,
+        font-color:$theme-flex-table-font-color,
+        border:$theme-flex-table-border
+));
+
+//grid-pagination
+@include component($component:css-grid-pagination,$map:(
+        background:$theme-grid-pagination-background,
+        font-color:$theme-grid-pagination-font-color,
+        text-shadow:$theme-grid-pagination-text-shadow,
+        border:$theme-grid-pagination-border,
+        icon-color:$theme-grid-pagination-icon-color,
+        hover:(
+                background:$theme-grid-pagination-background-hover,
+                font-color:$theme-grid-pagination-font-color-hover,
+                text-shadow:$theme-grid-pagination-text-shadow-hover,
+                border:$theme-grid-pagination-border-hover,
+                icon-color:$theme-grid-pagination-icon-color-hover
+        )
+));

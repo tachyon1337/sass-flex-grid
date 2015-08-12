@@ -1,0 +1,633 @@
+@import "variables";
+
+/// @access private
+@mixin _grid-pagination($component:null,
+$border-radius:null,
+$margin-right:null,
+$show-pages-border:null,
+$font:null,
+$phone-info-font-size:null
+
+){
+  $_max-pages:12;
+  $_breakpoint:900px;
+  $_small-breakpoint:500px;
+
+  @include flexbox($justification:space-between,$alignment:center);
+  &>page-navigation{
+    @include flexbox($justification:flex-start,$alignment:center);
+    a{
+      @include flexbox($justification:center,$alignment:center);
+      margin-right:$margin-right;
+      height:32px;
+      width:32px;
+      font-size:16px;
+      @if $font !=null{
+        font-family:$font;
+      }
+      @extend %#{$component}-background !optional;
+      &.control{
+        border-radius:$border-radius;
+        @extend %#{$component}-border !optional;
+        @extend %#{$component}-font !optional;
+        span{
+          @extend %#{$component}-font !optional;
+        }
+        @include media-breakpoint($_breakpoint){
+          &:nth-of-type(2){
+            margin-right:.5em;
+          }
+        }
+
+      }
+      &.page{
+        @extend %#{$component}-font !optional;
+        text-shadow:none !important;
+        @if($show-pages-border==true){
+          @extend %#{$component}-border !optional;
+          border-radius:$border-radius;
+        }
+        &:hover{
+          border-radius:$border-radius;
+          span{
+            text-shadow:none !important;
+          }
+        }
+        &.active{
+          @extend %#{$component}-background-hover !optional;
+          @extend %#{$component}-border-hover !optional;
+          @extend %#{$component}-font-hover !optional;
+          border-radius:$border-radius;
+        }
+        display:none;
+        @for $j from 1 through $_max-pages{
+          &:nth-of-type(#{$j}) {
+            display:inherit;
+          }
+        }
+        @include media-breakpoint($_breakpoint){
+          display:none !important;
+        }
+      }
+      &:hover{
+        @extend %#{$component}-background-hover !optional;
+        @extend %#{$component}-border-hover !optional;
+        @extend %#{$component}-font-hover !optional;
+        span{
+          @extend %#{$component}-font-hover !optional;
+        }
+      }
+    }
+  }
+
+  &>page-info{
+    @include flexbox($justification:flex-start,$alignment:center);
+    div{
+      font-size:16px;
+      @include media-breakpoint($_small-breakpoint){
+        font-size:$phone-info-font-size;
+      }
+      @extend %#{$component}-font !optional;
+      text-shadow:none !important;
+      @if $font !=null{
+        font-family:$font;
+      }
+    }
+    span{
+      &[refresh]{
+        margin-left:2em;
+        font-size:32px;
+        @include media-breakpoint($_small-breakpoint){
+          margin-left:.3em;
+        }
+        @extend %#{$component}-icon !optional;
+        text-shadow:none !important;
+        &:hover{
+          @extend %#{$component}-icon-hover !optional;
+          text-shadow:none !important;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+};
+
+/// @access private
+@mixin _flex-grid-columns-breakpoint($breakpoint,$headers,$len,$tag,$font,$color){
+  @include media-breakpoint($breakpoint){
+    section {
+      #{$tag} {
+        width:100%;
+        @for $i from 1 through $len{
+          &:nth-of-type(#{$len}n + #{$i}){
+            &:before{
+              content: '#{nth($headers,$i)}';
+              @if $font !=null{
+                font-family:$font;
+              }
+              @if $color !=null{
+                color:$color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/// @access private
+@mixin _flex-grid-touch-columns($breakpoint,$headers,$len,$tag,$font,$color){
+  &.breakpoint{
+    @include _flex-grid-columns-breakpoint($breakpoint,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="1024"]{
+    @include _flex-grid-columns-breakpoint(1024px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="950"]{
+    @include _flex-grid-columns-breakpoint(950px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="900"]{
+    @include _flex-grid-columns-breakpoint(900px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="850"]{
+    @include _flex-grid-columns-breakpoint(850px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="800"]{
+    @include _flex-grid-columns-breakpoint(800px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="768"]{
+    @include _flex-grid-columns-breakpoint(768px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="700"]{
+    @include _flex-grid-columns-breakpoint(700px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="650"]{
+    @include _flex-grid-columns-breakpoint(650px,$headers,$len,$tag,$font,$color);
+  }
+  &[breakpoint="600"]{
+    @include _flex-grid-columns-breakpoint(600px,$headers,$len,$tag,$font,$color);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/// @access private
+@mixin _flex-grid-breakpoint($touch-breakpoint,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+$touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag){
+  @include media-breakpoint($touch-breakpoint){
+    border-radius:$touch-border-radius;
+    &>header{
+      display:none;
+    }
+    section{
+      font-size:$touch-font-size;
+      @include flexbox-column($justification:flex-start,$alignment:flex-start);
+      &>#{$grid-tag}{
+        border-right:0 !important;
+        width:100%;
+        padding:$touch-cell-padding;
+
+        &:nth-of-type(n){
+          background:none;
+          &:before{
+            position:absolute;
+            top:0;
+            left:$touch-header-left;
+            @if $header-color !=null{
+              color:$header-color;
+            }
+            @if $header-font !=null{
+              font-family:$header-font;
+            }
+          }
+        }
+        &:nth-of-type(#{$columns}n+1){
+          margin-top:$touch-cell-margin-top;
+        }
+        &:nth-of-type(#{$columns}n+#{$columns}){
+          padding-bottom:$touch-cell-padding-bottom;
+          border-top:0 !important;
+          border-left:0 !important;
+          border-right:0 !important;
+          border-bottom:$touch-cell-border-bottom !important;
+        }
+        &:last-of-type{
+          border-bottom:0 !important;
+        }
+      }
+    }
+  }
+  @include media-breakpoint(600px){
+    @include gutter-bleed();
+    border-right:0 !important;
+    border-left:0 !important;
+    padding-left:.5em;
+    section{
+      &>grid-item{
+        padding-right:16px;
+        font-size:14px;
+        &:nth-of-type(n){
+          &:before{
+            left:16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/// @access private
+@mixin _even-cell-alt($columns,$cell-background-alt){
+  @for $i from 1 through $columns{
+    &:nth-of-type(#{2*$columns}n + #{$i + $columns}){
+      background:$cell-background-alt;
+    }
+  }
+}
+
+/// @access private
+@mixin _odd-cell-alt($columns,$cell-background-alt){
+  @for $i from 1 through $columns{
+
+    &:nth-of-type(#{2*$columns}n + #{$i} ){
+      background:$cell-background-alt;
+    }
+  }
+}
+
+/// @access private
+@mixin _flex-grid-columns($columns,$cell-background-alt,$grid-tag){
+  $_column-percentage: columns-to-percentage($columns);
+  &>header{
+    &>*{
+      width:$_column-percentage;
+    }
+  }
+  section{
+    &>#{$grid-tag}{
+      width:$_column-percentage;
+      @for $i from 1 through $columns{
+        &:nth-of-type(#{2*$columns}n + #{$i + $columns}){
+          background:$cell-background-alt;
+        }
+      }
+    }
+  }
+}
+
+/// @access private
+@mixin _flex-grid($component:null,
+$font-size:null,
+$border-radius:null,
+$columns:null,
+$header-color:null,
+$header-font:null,
+$header-bold:null,
+$header-background:null,
+$header-icon-font:null,
+$header-icon-up:null,
+$header-icon-down:null,
+$justification:null,
+$alignment:null,
+$cell-justification:null,
+$cell-alignment:null,
+$cell-padding:null,
+$cell-height:null,
+$cell-show-borders:null,
+$cell-background:null,
+$cell-background-alt:null,
+$cell-alt-type:null,
+$footer-background:null,
+$touch-breakpoint:null,
+$touch-cell-padding:null,
+$touch-cell-padding-bottom:null,
+$touch-cell-margin-top:null,
+$touch-cell-border-bottom:null,
+$touch-font-size:null,
+$touch-border-radius:null,
+$touch-header-left:null,
+$grid-tag:null
+)
+{
+  $_column-percentage: columns-to-percentage($columns);
+  $_max-columns:10;
+
+  font-size:$font-size;
+  width:100%;
+  border-radius:$border-radius;
+  @include flexbox-column($justification:flex-start,$alignment:flex-start);
+  @extend %#{$component}-border !optional;
+  &>*{
+    width:100%;
+  }
+  &>header{
+    @include flexbox($justification:$justification,$alignment:$alignment);
+    background:$header-background;
+    @extend %#{$component}-border !optional;
+    border-top:0 !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    &>*{
+      position:relative;
+      font-size:1em;
+      width:$_column-percentage;
+      margin:0;
+      border-top:0 !important;
+      border-left:0 !important;
+      border-bottom:0 !important;
+      padding:$cell-padding;
+      min-height:$cell-height;
+      max-height:$cell-height;
+      overflow:hidden;
+      @include flexbox($justification:$justification,$alignment:$alignment);
+
+      @if $header-color !=null{
+        color:$header-color;
+      }
+      @if $header-font !=null{
+        font-family:$header-font;
+      }
+      @if $header-bold==true{
+        font-weight: bold;
+      }
+      &[sortable]{
+        cursor:pointer;
+      }
+      &>.label{
+        overflow:hidden;
+        max-height:.85*$cell-height;
+      }
+      &.up{
+        &:after{
+          font-family:$header-icon-font;
+          content:'#{$header-icon-up}';
+          font-size:12px;
+          @if $header-color !=null{
+            color:$header-color;
+          }
+          @extend %#{$component}-icon !optional;
+        }
+      }
+      &.down{
+        &:after{
+          font-family:map-get($Icons,font-family);
+          content:'#{$header-icon-down}';
+          font-size:12px;
+          @if $header-color !=null{
+            color:$header-color;
+          }
+          @extend %#{$component}-icon !optional;
+        }
+      }
+    }
+    h6{
+      font-size:1em;
+      @extend %#{$component}-border !optional;
+      &:last-of-type{
+        border-right:0 !important;
+      }
+    }
+  }
+  section{
+    @include flexbox($justification:flex-start,$alignment:stretch);
+    @include flex-wrap(wrap);
+    background:$cell-background;
+    &>#{$grid-tag}{
+      position:relative;
+      padding:$cell-padding;
+      min-height:$cell-height;
+      width:$_column-percentage;
+      @include flexbox-column($justification:$cell-justification,$alignment:$cell-alignment);
+      @if $cell-show-borders==true{
+        @extend %#{$component}-border !optional;
+        border-top:0 !important;
+        border-left:0 !important;
+        border-bottom:0 !important;
+        &:nth-of-type(#{$columns}n){
+          border-right:0 !important;
+        }
+      }
+      @if($cell-alt-type==even){
+        @include _even-cell-alt($columns,$cell-background-alt);
+      }@else{
+        @include _odd-cell-alt($columns,$cell-background-alt);
+      }
+
+
+    }
+    &:empty{
+      min-height:200px;
+      &:after{
+        content:'There is no data available for this query...';
+        margin:1em 0 0 1em;
+        @include phone-content(){
+          font-size:.9em;
+        }
+      }
+
+    }
+  }
+  @for $j from 2 through $_max-columns{
+    &[columns="#{$j}"]{
+      @include _flex-grid-columns($j,$cell-background-alt,$grid-tag);
+    }
+  }
+  footer{
+    background:$footer-background;
+    position:relative;
+    padding:$cell-padding;
+    min-height:$cell-height;
+    @extend %#{$component}-border !optional;
+    border-right:0 !important;
+    border-left:0 !important;
+    border-bottom:0 !important;
+  }
+
+  &.breakpoint{
+    @include _flex-grid-breakpoint($touch-breakpoint,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+
+  &[breakpoint="1024"]{
+    @include _flex-grid-breakpoint(1000px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="950"]{
+    @include _flex-grid-breakpoint(950px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="900"]{
+    @include _flex-grid-breakpoint(900px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="850"]{
+    @include _flex-grid-breakpoint(850px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="800"]{
+    @include _flex-grid-breakpoint(800px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="768"]{
+    @include _flex-grid-breakpoint(768px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="700"]{
+    @include _flex-grid-breakpoint(700px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="650"]{
+    @include _flex-grid-breakpoint(650px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &[breakpoint="600"]{
+    @include _flex-grid-breakpoint(600px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+
+}
+
+
+
+/// @access public
+/// @param {String} $component
+/// @param {List} $tags
+/// @param {String} $class
+/// @param {List} $columns
+/// @param {Map} $map
+///  $map:(
+///   breakpoint:<value>,
+///   font-size:<value>,
+///   border-radius:<value>,
+///   columns:<value>,
+///   justification:<value>,
+///   alignment:<value>,
+///   column-count,
+///   header:(
+///       background:<value>,
+///       color:<value>,
+///       font:<value>,
+///       bold:<value>,
+///       icon-font:<value>,
+///       icon-up:<value>,
+///       icon-down:<value>
+///   ),
+///   cell:(
+///        background:<value>,
+///        justification:<value>,
+///        alignment:<value>,
+///        padding:<value>,
+///        height:<value>,
+///        show-borders:<value>,
+///        background:<value>
+///        background-alt:<value>,
+///        alt-type:<value>,
+///   ),
+///   footer:(
+///        background:<value>
+///   ),
+///   touch:(
+///        breakpoint:<value>,
+///        cell-padding:<value>,
+///        cell-padding-bottom:<value>,
+///        cell-margin-top:<value>,
+///        cell-border-bottom:<value>,
+///        font-size:<value>,
+///        border-radius:<value>,
+///        header-left:<value>,
+///        header-font:<value>,
+///        header-font-color:<value>
+///   )
+/// )
+@mixin flex-grid($component:css-flex-grid,$tags:null,$class:null,$map:(),$columns:()){
+
+  $_white:map-get($Base,white);
+  $_icon-font-family:map-get($Icons,font-family);
+
+  $_columns:length($columns);
+  @if $_columns==0{
+    $_columns:map-get-default($map,column-count,4);
+  }
+  $touch-breakpoint:map-get-default($map,breakpoint,750px);
+  $font-size:map-get-default($map,font-size,1em);
+  $border-radius:map-get-default($map,border-radius,0);
+  $header-background:map-nested-get-default($map,header,background,$_white);
+  $header-color:map-nested-get($map,header,color);
+  $header-font:map-nested-get($map,header,font);
+  $header-bold:map-nested-get($map,header,bold);
+  $header-icon-font:map-nested-get-default($map,header,icon-font,$_icon-font-family);
+  $header-icon-up:map-nested-get-default($map,header,icon-up,\e1a6);
+  $header-icon-down:map-nested-get-default($map,header,icon-down,\e1a5);
+  $justification:map-get-default($map,justification,flex-start);
+  $alignment:map-get-default($map,alignment,center);
+  $cell-justification:map-nested-get-default($map,cell,justification,center);
+  $cell-alignment:map-nested-get-default($map,cell,alignment,flex-start);
+  $cell-padding:map-nested-get-default($map,cell,padding,.3em .5em .3em 1em);
+  $cell-height:map-nested-get-default($map,cell,height,40px);
+  $cell-show-borders:map-nested-get-default($map,cell,show-borders,true);
+  $cell-background:map-nested-get-default($map,cell,background,$_white);
+  $cell-background-alt:map-nested-get-default($map,cell,background-alt,#f5f5f5);
+  $cell-alt-type:map-nested-get-default($map,cell,alt-type,even);
+  $footer-background:map-nested-get-default($map,footer,background,$_white);
+  $touch-cell-padding:map-nested-get-default($map,touch,cell-padding,0 .5em 1em 11em);
+  $touch-cell-padding-bottom:map-nested-get-default($map,touch,cell-padding-bottom,2em);
+  $touch-cell-margin-top:map-nested-get-default($map,touch,cell-margin-top,1em);
+  $touch-cell-border-bottom:map-nested-get-default($map,touch,cell-border-bottom,1px solid #ddd);
+  $touch-font-size:map-nested-get-default($map,touch,font-size,16px);
+  $touch-border-radius:map-nested-get-default($map,touch,border-radius,0);
+  $touch-header-left:map-nested-get-default($map,touch,header-left,10px);
+  $touch-header-font:map-nested-get($map,touch,header-font);
+  $touch-header-font-color:map-nested-get($map,touch,header-font-color);
+
+  $tag:flex-grid;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _flex-grid($component,$font-size,$border-radius,$_columns,$header-color,$header-font,$header-bold,$header-background,$header-icon-font,$header-icon-up,$header-icon-down,
+            $justification,$alignment,$cell-justification,$cell-alignment,$cell-padding,$cell-height,$cell-show-borders,$cell-background,$cell-background-alt,$cell-alt-type,
+            $footer-background, $touch-breakpoint, $touch-cell-padding,$touch-cell-padding-bottom,$touch-cell-margin-top,$touch-cell-border-bottom,
+            $touch-font-size,$touch-border-radius,$touch-header-left,grid-item);
+    @content;
+
+    @if length($columns) > 0{
+      @include _flex-grid-touch-columns($touch-breakpoint,$columns,$_columns,grid-item,$touch-header-font,$touch-header-font-color);
+    }
+
+  }
+}
+
+
+/// @access public
+/// @param {String} $component
+/// @param {List} $tags
+/// @param {String} $class
+/// @param {Map} $map
+///  $map:(
+///   border-radius:<value>,
+///   margin-right:<value>,
+///   show-pages-border:<value>,
+///   font:<value>,
+///   phone:(
+///     info-font-size:<value>
+///   )
+/// )
+@mixin grid-pagination($component:css-grid-pagination,$tags:null,$class:null,$map:()){
+
+  $border-radius:map-get-default($map,border-radius,50%);
+  $margin-right:map-get-default($map,margin-right,.25em);
+  $show-pages-border:map-get-default($map,show-pages-border,false);
+  $font:map-get($map,font);
+  $phone-info-font-size:map-nested-get-default($map,phone,info-font-size,14px);
+  $tag:grid-pagination;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _grid-pagination($component,$border-radius,$margin-right,$show-pages-border,$font,$phone-info-font-size);
+    @content;
+  }
+}

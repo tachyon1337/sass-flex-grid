@@ -1,0 +1,596 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sass-flex-grid - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Sass-flex-grid - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Sass Flex Grid Component</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Sass-flex-grid - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="_grid-pagination" data-type="mixin"><a href="#mixin-_grid-pagination">_grid-pagination</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-grid-columns-breakpoint" data-type="mixin"><a href="#mixin-_flex-grid-columns-breakpoint">_flex-grid-columns-breakpoint</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-grid-touch-columns" data-type="mixin"><a href="#mixin-_flex-grid-touch-columns">_flex-grid-touch-columns</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-grid-breakpoint" data-type="mixin"><a href="#mixin-_flex-grid-breakpoint">_flex-grid-breakpoint</a></li><li class="sidebar__item sassdoc__item" data-name="_even-cell-alt" data-type="mixin"><a href="#mixin-_even-cell-alt">_even-cell-alt</a></li><li class="sidebar__item sassdoc__item" data-name="_odd-cell-alt" data-type="mixin"><a href="#mixin-_odd-cell-alt">_odd-cell-alt</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-grid-columns" data-type="mixin"><a href="#mixin-_flex-grid-columns">_flex-grid-columns</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-grid" data-type="mixin"><a href="#mixin-_flex-grid">_flex-grid</a></li><li class="sidebar__item sassdoc__item" data-name="flex-grid" data-type="mixin"><a href="#mixin-flex-grid">flex-grid</a></li><li class="sidebar__item sassdoc__item" data-name="grid-pagination" data-type="mixin"><a href="#mixin-grid-pagination">grid-pagination</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-table-breakpoint" data-type="mixin"><a href="#mixin-_flex-table-breakpoint">_flex-table-breakpoint</a></li><li class="sidebar__item sassdoc__item" data-name="_flex-table-touch-headers" data-type="mixin"><a href="#mixin-_flex-table-touch-headers">_flex-table-touch-headers</a></li><li class="sidebar__item sassdoc__item" data-name="flex-table" data-type="mixin"><a href="#mixin-flex-table">flex-table</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-_grid-pagination"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_grid-pagination">_grid-pagination</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _grid-pagination() { 
+  $_max-pages:12;
+  $_breakpoint:900px;
+  $_small-breakpoint:500px;
+
+  @include flexbox($justification:space-between,$alignment:center);
+  &amp;&gt;page-navigation{
+    @include flexbox($justification:flex-start,$alignment:center);
+    a{
+      @include flexbox($justification:center,$alignment:center);
+      margin-right:$margin-right;
+      height:32px;
+      width:32px;
+      font-size:16px;
+      @if $font !=null{
+        font-family:$font;
+      }
+      @extend %#{$component}-background !optional;
+      &amp;.control{
+        border-radius:$border-radius;
+        @extend %#{$component}-border !optional;
+        @extend %#{$component}-font !optional;
+        span{
+          @extend %#{$component}-font !optional;
+        }
+        @include media-breakpoint($_breakpoint){
+          &amp;:nth-of-type(2){
+            margin-right:.5em;
+          }
+        }
+
+      }
+      &amp;.page{
+        @extend %#{$component}-font !optional;
+        text-shadow:none !important;
+        @if($show-pages-border==true){
+          @extend %#{$component}-border !optional;
+          border-radius:$border-radius;
+        }
+        &amp;:hover{
+          border-radius:$border-radius;
+          span{
+            text-shadow:none !important;
+          }
+        }
+        &amp;.active{
+          @extend %#{$component}-background-hover !optional;
+          @extend %#{$component}-border-hover !optional;
+          @extend %#{$component}-font-hover !optional;
+          border-radius:$border-radius;
+        }
+        display:none;
+        @for $j from 1 through $_max-pages{
+          &amp;:nth-of-type(#{$j}) {
+            display:inherit;
+          }
+        }
+        @include media-breakpoint($_breakpoint){
+          display:none !important;
+        }
+      }
+      &amp;:hover{
+        @extend %#{$component}-background-hover !optional;
+        @extend %#{$component}-border-hover !optional;
+        @extend %#{$component}-font-hover !optional;
+        span{
+          @extend %#{$component}-font-hover !optional;
+        }
+      }
+    }
+  }
+
+  &amp;&gt;page-info{
+    @include flexbox($justification:flex-start,$alignment:center);
+    div{
+      font-size:16px;
+      @include media-breakpoint($_small-breakpoint){
+        font-size:$phone-info-font-size;
+      }
+      @extend %#{$component}-font !optional;
+      text-shadow:none !important;
+      @if $font !=null{
+        font-family:$font;
+      }
+    }
+    span{
+      &amp;[refresh]{
+        margin-left:2em;
+        font-size:32px;
+        @include media-breakpoint($_small-breakpoint){
+          margin-left:.3em;
+        }
+        @extend %#{$component}-icon !optional;
+        text-shadow:none !important;
+        &amp;:hover{
+          @extend %#{$component}-icon-hover !optional;
+          text-shadow:none !important;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin _grid-pagination() { ... }"><code>@mixin _grid-pagination() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-grid-pagination"><code>grid-pagination</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-grid-columns-breakpoint"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-grid-columns-breakpoint">_flex-grid-columns-breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-grid-columns-breakpoint() { 
+  @include media-breakpoint($breakpoint){
+    section {
+      #{$tag} {
+        width:100%;
+        @for $i from 1 through $len{
+          &amp;:nth-of-type(#{$len}n + #{$i}){
+            &amp;:before{
+              content: &#39;#{nth($headers,$i)}&#39;;
+              @if $font !=null{
+                font-family:$font;
+              }
+              @if $color !=null{
+                color:$color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin _flex-grid-columns-breakpoint() { ... }"><code>@mixin _flex-grid-columns-breakpoint() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid-touch-columns"><code>_flex-grid-touch-columns</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-grid-touch-columns"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-grid-touch-columns">_flex-grid-touch-columns</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-grid-touch-columns() { 
+  &amp;.breakpoint{
+    @include _flex-grid-columns-breakpoint($breakpoint,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;1024&quot;]{
+    @include _flex-grid-columns-breakpoint(1024px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;950&quot;]{
+    @include _flex-grid-columns-breakpoint(950px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;900&quot;]{
+    @include _flex-grid-columns-breakpoint(900px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;850&quot;]{
+    @include _flex-grid-columns-breakpoint(850px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;800&quot;]{
+    @include _flex-grid-columns-breakpoint(800px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;768&quot;]{
+    @include _flex-grid-columns-breakpoint(768px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;700&quot;]{
+    @include _flex-grid-columns-breakpoint(700px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;650&quot;]{
+    @include _flex-grid-columns-breakpoint(650px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;600&quot;]{
+    @include _flex-grid-columns-breakpoint(600px,$headers,$len,$tag,$font,$color);
+  }
+ }" data-collapsed="@mixin _flex-grid-touch-columns() { ... }"><code>@mixin _flex-grid-touch-columns() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid-columns-breakpoint"><code>_flex-grid-columns-breakpoint</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-flex-grid"><code>flex-grid</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-grid-breakpoint"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-grid-breakpoint">_flex-grid-breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-grid-breakpoint() { 
+  @include media-breakpoint($touch-breakpoint){
+    border-radius:$touch-border-radius;
+    &amp;&gt;header{
+      display:none;
+    }
+    section{
+      font-size:$touch-font-size;
+      @include flexbox-column($justification:flex-start,$alignment:flex-start);
+      &amp;&gt;#{$grid-tag}{
+        border-right:0 !important;
+        width:100%;
+        padding:$touch-cell-padding;
+
+        &amp;:nth-of-type(n){
+          background:none;
+          &amp;:before{
+            position:absolute;
+            top:0;
+            left:$touch-header-left;
+            @if $header-color !=null{
+              color:$header-color;
+            }
+            @if $header-font !=null{
+              font-family:$header-font;
+            }
+          }
+        }
+        &amp;:nth-of-type(#{$columns}n+1){
+          margin-top:$touch-cell-margin-top;
+        }
+        &amp;:nth-of-type(#{$columns}n+#{$columns}){
+          padding-bottom:$touch-cell-padding-bottom;
+          border-top:0 !important;
+          border-left:0 !important;
+          border-right:0 !important;
+          border-bottom:$touch-cell-border-bottom !important;
+        }
+        &amp;:last-of-type{
+          border-bottom:0 !important;
+        }
+      }
+    }
+  }
+  @include media-breakpoint(600px){
+    @include gutter-bleed();
+    border-right:0 !important;
+    border-left:0 !important;
+    padding-left:.5em;
+    section{
+      &amp;&gt;grid-item{
+        padding-right:16px;
+        font-size:14px;
+        &amp;:nth-of-type(n){
+          &amp;:before{
+            left:16px;
+          }
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin _flex-grid-breakpoint() { ... }"><code>@mixin _flex-grid-breakpoint() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li></ul></section><section class="main__item container item" id="mixin-_even-cell-alt"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_even-cell-alt">_even-cell-alt</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _even-cell-alt() { 
+  @for $i from 1 through $columns{
+    &amp;:nth-of-type(#{2*$columns}n + #{$i + $columns}){
+      background:$cell-background-alt;
+    }
+  }
+ }" data-collapsed="@mixin _even-cell-alt() { ... }"><code>@mixin _even-cell-alt() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li></ul></section><section class="main__item container item" id="mixin-_odd-cell-alt"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_odd-cell-alt">_odd-cell-alt</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _odd-cell-alt() { 
+  @for $i from 1 through $columns{
+
+    &amp;:nth-of-type(#{2*$columns}n + #{$i} ){
+      background:$cell-background-alt;
+    }
+  }
+ }" data-collapsed="@mixin _odd-cell-alt() { ... }"><code>@mixin _odd-cell-alt() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-grid-columns"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-grid-columns">_flex-grid-columns</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-grid-columns() { 
+  $_column-percentage: columns-to-percentage($columns);
+  &amp;&gt;header{
+    &amp;&gt;*{
+      width:$_column-percentage;
+    }
+  }
+  section{
+    &amp;&gt;#{$grid-tag}{
+      width:$_column-percentage;
+      @for $i from 1 through $columns{
+        &amp;:nth-of-type(#{2*$columns}n + #{$i + $columns}){
+          background:$cell-background-alt;
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin _flex-grid-columns() { ... }"><code>@mixin _flex-grid-columns() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-grid"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-grid">_flex-grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-grid() { 
+  $_column-percentage: columns-to-percentage($columns);
+  $_max-columns:10;
+
+  font-size:$font-size;
+  width:100%;
+  border-radius:$border-radius;
+  @include flexbox-column($justification:flex-start,$alignment:flex-start);
+  @extend %#{$component}-border !optional;
+  &amp;&gt;*{
+    width:100%;
+  }
+  &amp;&gt;header{
+    @include flexbox($justification:$justification,$alignment:$alignment);
+    background:$header-background;
+    @extend %#{$component}-border !optional;
+    border-top:0 !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    &amp;&gt;*{
+      position:relative;
+      font-size:1em;
+      width:$_column-percentage;
+      margin:0;
+      border-top:0 !important;
+      border-left:0 !important;
+      border-bottom:0 !important;
+      padding:$cell-padding;
+      min-height:$cell-height;
+      max-height:$cell-height;
+      overflow:hidden;
+      @include flexbox($justification:$justification,$alignment:$alignment);
+
+      @if $header-color !=null{
+        color:$header-color;
+      }
+      @if $header-font !=null{
+        font-family:$header-font;
+      }
+      @if $header-bold==true{
+        font-weight: bold;
+      }
+      &amp;[sortable]{
+        cursor:pointer;
+      }
+      &amp;&gt;.label{
+        overflow:hidden;
+        max-height:.85*$cell-height;
+      }
+      &amp;.up{
+        &amp;:after{
+          font-family:$header-icon-font;
+          content:&#39;#{$header-icon-up}&#39;;
+          font-size:12px;
+          @if $header-color !=null{
+            color:$header-color;
+          }
+          @extend %#{$component}-icon !optional;
+        }
+      }
+      &amp;.down{
+        &amp;:after{
+          font-family:map-get($Icons,font-family);
+          content:&#39;#{$header-icon-down}&#39;;
+          font-size:12px;
+          @if $header-color !=null{
+            color:$header-color;
+          }
+          @extend %#{$component}-icon !optional;
+        }
+      }
+    }
+    h6{
+      font-size:1em;
+      @extend %#{$component}-border !optional;
+      &amp;:last-of-type{
+        border-right:0 !important;
+      }
+    }
+  }
+  section{
+    @include flexbox($justification:flex-start,$alignment:stretch);
+    @include flex-wrap(wrap);
+    background:$cell-background;
+    &amp;&gt;#{$grid-tag}{
+      position:relative;
+      padding:$cell-padding;
+      min-height:$cell-height;
+      width:$_column-percentage;
+      @include flexbox-column($justification:$cell-justification,$alignment:$cell-alignment);
+      @if $cell-show-borders==true{
+        @extend %#{$component}-border !optional;
+        border-top:0 !important;
+        border-left:0 !important;
+        border-bottom:0 !important;
+        &amp;:nth-of-type(#{$columns}n){
+          border-right:0 !important;
+        }
+      }
+      @if($cell-alt-type==even){
+        @include _even-cell-alt($columns,$cell-background-alt);
+      }@else{
+        @include _odd-cell-alt($columns,$cell-background-alt);
+      }
+
+
+    }
+    &amp;:empty{
+      min-height:200px;
+      &amp;:after{
+        content:&#39;There is no data available for this query...&#39;;
+        margin:1em 0 0 1em;
+        @include phone-content(){
+          font-size:.9em;
+        }
+      }
+
+    }
+  }
+  @for $j from 2 through $_max-columns{
+    &amp;[columns=&quot;#{$j}&quot;]{
+      @include _flex-grid-columns($j,$cell-background-alt,$grid-tag);
+    }
+  }
+  footer{
+    background:$footer-background;
+    position:relative;
+    padding:$cell-padding;
+    min-height:$cell-height;
+    @extend %#{$component}-border !optional;
+    border-right:0 !important;
+    border-left:0 !important;
+    border-bottom:0 !important;
+  }
+
+  &amp;.breakpoint{
+    @include _flex-grid-breakpoint($touch-breakpoint,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+
+  &amp;[breakpoint=&quot;1024&quot;]{
+    @include _flex-grid-breakpoint(1000px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;950&quot;]{
+    @include _flex-grid-breakpoint(950px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;900&quot;]{
+    @include _flex-grid-breakpoint(900px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;850&quot;]{
+    @include _flex-grid-breakpoint(850px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;800&quot;]{
+    @include _flex-grid-breakpoint(800px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;768&quot;]{
+    @include _flex-grid-breakpoint(768px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;700&quot;]{
+    @include _flex-grid-breakpoint(700px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;650&quot;]{
+    @include _flex-grid-breakpoint(650px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+  &amp;[breakpoint=&quot;600&quot;]{
+    @include _flex-grid-breakpoint(600px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
+  }
+
+ }" data-collapsed="@mixin _flex-grid() { ... }"><code>@mixin _flex-grid() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_even-cell-alt"><code>_even-cell-alt</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_odd-cell-alt"><code>_odd-cell-alt</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid-columns"><code>_flex-grid-columns</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid-breakpoint"><code>_flex-grid-breakpoint</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-flex-grid"><code>flex-grid</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-flex-table"><code>flex-table</code></a></li></ul></section><section class="main__item container item" id="mixin-flex-grid"><h3 class="item__heading"><a class="item__name" href="#mixin-flex-grid">flex-grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flex-grid($component, $tags, $class, $columns, $map) { 
+
+  $_white:map-get($Base,white);
+  $_icon-font-family:map-get($Icons,font-family);
+
+  $_columns:length($columns);
+  @if $_columns==0{
+    $_columns:map-get-default($map,column-count,4);
+  }
+  $touch-breakpoint:map-get-default($map,breakpoint,750px);
+  $font-size:map-get-default($map,font-size,1em);
+  $border-radius:map-get-default($map,border-radius,0);
+  $header-background:map-nested-get-default($map,header,background,$_white);
+  $header-color:map-nested-get($map,header,color);
+  $header-font:map-nested-get($map,header,font);
+  $header-bold:map-nested-get($map,header,bold);
+  $header-icon-font:map-nested-get-default($map,header,icon-font,$_icon-font-family);
+  $header-icon-up:map-nested-get-default($map,header,icon-up,\e1a6);
+  $header-icon-down:map-nested-get-default($map,header,icon-down,\e1a5);
+  $justification:map-get-default($map,justification,flex-start);
+  $alignment:map-get-default($map,alignment,center);
+  $cell-justification:map-nested-get-default($map,cell,justification,center);
+  $cell-alignment:map-nested-get-default($map,cell,alignment,flex-start);
+  $cell-padding:map-nested-get-default($map,cell,padding,.3em .5em .3em 1em);
+  $cell-height:map-nested-get-default($map,cell,height,40px);
+  $cell-show-borders:map-nested-get-default($map,cell,show-borders,true);
+  $cell-background:map-nested-get-default($map,cell,background,$_white);
+  $cell-background-alt:map-nested-get-default($map,cell,background-alt,#f5f5f5);
+  $cell-alt-type:map-nested-get-default($map,cell,alt-type,even);
+  $footer-background:map-nested-get-default($map,footer,background,$_white);
+  $touch-cell-padding:map-nested-get-default($map,touch,cell-padding,0 .5em 1em 11em);
+  $touch-cell-padding-bottom:map-nested-get-default($map,touch,cell-padding-bottom,2em);
+  $touch-cell-margin-top:map-nested-get-default($map,touch,cell-margin-top,1em);
+  $touch-cell-border-bottom:map-nested-get-default($map,touch,cell-border-bottom,1px solid #ddd);
+  $touch-font-size:map-nested-get-default($map,touch,font-size,16px);
+  $touch-border-radius:map-nested-get-default($map,touch,border-radius,0);
+  $touch-header-left:map-nested-get-default($map,touch,header-left,10px);
+  $touch-header-font:map-nested-get($map,touch,header-font);
+  $touch-header-font-color:map-nested-get($map,touch,header-font-color);
+
+  $tag:flex-grid;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _flex-grid($component,$font-size,$border-radius,$_columns,$header-color,$header-font,$header-bold,$header-background,$header-icon-font,$header-icon-up,$header-icon-down,
+            $justification,$alignment,$cell-justification,$cell-alignment,$cell-padding,$cell-height,$cell-show-borders,$cell-background,$cell-background-alt,$cell-alt-type,
+            $footer-background, $touch-breakpoint, $touch-cell-padding,$touch-cell-padding-bottom,$touch-cell-margin-top,$touch-cell-border-bottom,
+            $touch-font-size,$touch-border-radius,$touch-header-left,grid-item);
+    @content;
+
+    @if length($columns) &gt; 0{
+      @include _flex-grid-touch-columns($touch-breakpoint,$columns,$_columns,grid-item,$touch-header-font,$touch-header-font-color);
+    }
+
+  }
+ }" data-collapsed="@mixin flex-grid($component, $tags, $class, $columns, $map) { ... }"><code>@mixin flex-grid($component, $tags, $class, $columns, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$component</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$tags</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$columns</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>$map:( breakpoint:<value>, font-size:<value>, border-radius:<value>, columns:<value>, justification:<value>, alignment:<value>, column-count, header:( background:<value>, color:<value>, font:<value>, bold:<value>, icon-font:<value>, icon-up:<value>, icon-down:<value>), cell:( background:<value>, justification:<value>, alignment:<value>, padding:<value>, height:<value>, show-borders:<value>, background:<value>background-alt:<value>, alt-type:<value>, ), footer:( background:<value>), touch:( breakpoint:<value>, cell-padding:<value>, cell-padding-bottom:<value>, cell-margin-top:<value>, cell-border-bottom:<value>, font-size:<value>, border-radius:<value>, header-left:<value>, header-font:<value>, header-font-color:<value>) )</value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid-touch-columns"><code>_flex-grid-touch-columns</code></a></li></ul></p></section><section class="main__item container item" id="mixin-grid-pagination"><h3 class="item__heading"><a class="item__name" href="#mixin-grid-pagination">grid-pagination</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin grid-pagination($component, $tags, $class, $map) { 
+
+  $border-radius:map-get-default($map,border-radius,50%);
+  $margin-right:map-get-default($map,margin-right,.25em);
+  $show-pages-border:map-get-default($map,show-pages-border,false);
+  $font:map-get($map,font);
+  $phone-info-font-size:map-nested-get-default($map,phone,info-font-size,14px);
+  $tag:grid-pagination;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _grid-pagination($component,$border-radius,$margin-right,$show-pages-border,$font,$phone-info-font-size);
+    @content;
+  }
+ }" data-collapsed="@mixin grid-pagination($component, $tags, $class, $map) { ... }"><code>@mixin grid-pagination($component, $tags, $class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$component</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$tags</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>$map:( border-radius:<value>, margin-right:<value>, show-pages-border:<value>, font:<value>, phone:( info-font-size:<value>) )</value></value></value></value></value></p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_grid-pagination"><code>_grid-pagination</code></a></li></ul></p></section><section class="main__item container item" id="mixin-_flex-table-breakpoint"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-table-breakpoint">_flex-table-breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-table-breakpoint() { 
+  @include media-breakpoint($breakpoint){
+    section {
+      #{$tag} {
+        @for $i from 1 through $len{
+          &amp;:nth-of-type(#{$len}n + #{$i}){
+            &amp;:before{
+              content: &#39;#{nth($headers,$i)}&#39;;
+              @if $font !=null{
+                font-family:$font;
+              }
+              @if $color !=null{
+                color:$color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin _flex-table-breakpoint() { ... }"><code>@mixin _flex-table-breakpoint() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-table-touch-headers"><code>_flex-table-touch-headers</code></a></li></ul></section><section class="main__item container item" id="mixin-_flex-table-touch-headers"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_flex-table-touch-headers">_flex-table-touch-headers</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _flex-table-touch-headers() { 
+  &amp;.breakpoint{
+    @include _flex-table-breakpoint($breakpoint,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;1024&quot;]{
+    @include _flex-table-breakpoint(1024px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;950&quot;]{
+    @include _flex-table-breakpoint(950px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;900&quot;]{
+    @include _flex-table-breakpoint(900px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;850&quot;]{
+    @include _flex-table-breakpoint(850px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;800&quot;]{
+    @include _flex-table-breakpoint(800px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;768&quot;]{
+    @include _flex-table-breakpoint(768px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;700&quot;]{
+    @include _flex-table-breakpoint(700px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;650&quot;]{
+    @include _flex-table-breakpoint(650px,$headers,$len,$tag,$font,$color);
+  }
+  &amp;[breakpoint=&quot;600&quot;]{
+    @include _flex-table-breakpoint(600px,$headers,$len,$tag,$font,$color);
+  }
+ }" data-collapsed="@mixin _flex-table-touch-headers() { ... }"><code>@mixin _flex-table-touch-headers() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-table-breakpoint"><code>_flex-table-breakpoint</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-flex-table"><code>flex-table</code></a></li></ul></section><section class="main__item container item" id="mixin-flex-table"><h3 class="item__heading"><a class="item__name" href="#mixin-flex-table">flex-table</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flex-table($component, $tags, $class, $headers, $map) { 
+
+  $_white:map-get($Base,white);
+  $_icon-font-family:map-get($Icons,font-family);
+
+  $_columns:length($columns);
+  @if $_columns==0{
+    $_columns:map-get-default($map,column-count,4);
+  }
+  $touch-breakpoint:map-get-default($map,breakpoint,750px);
+
+  $font-size:map-get-default($map,font-size,1em);
+  $border-radius:map-get-default($map,border-radius,0);
+
+  $header-background:map-nested-get-default($map,header,background,$_white);
+  $header-color:map-nested-get($map,header,color);
+  $header-font:map-nested-get($map,header,font);
+  $header-bold:map-nested-get($map,header,bold);
+  $header-icon-font:map-nested-get-default($map,header,icon-font,$_icon-font-family);
+  $header-icon-up:map-nested-get-default($map,header,icon-up,\e1a6);
+  $header-icon-down:map-nested-get-default($map,header,icon-down,\e1a5);
+  $justification:map-get-default($map,justification,flex-start);
+  $alignment:map-get-default($map,alignment,center);
+  $cell-justification:map-nested-get-default($map,cell,justification,center);
+  $cell-alignment:map-nested-get-default($map,cell,alignment,flex-start);
+  $cell-padding:map-nested-get-default($map,cell,padding,.3em .5em .3em 1em);
+  $cell-height:map-nested-get-default($map,cell,height,40px);
+  $cell-show-borders:map-nested-get-default($map,cell,show-borders,true);
+  $cell-background:map-nested-get-default($map,cell,background,$_white);
+  $cell-background-alt:map-nested-get-default($map,cell,background-alt,#f5f5f5);
+  $cell-alt-type:map-nested-get-default($map,cell,alt-type,even);
+  $footer-background:map-nested-get-default($map,footer,background,$_white);
+  $touch-cell-padding:map-nested-get-default($map,touch,cell-padding,0 .5em 1em 11em);
+  $touch-cell-padding-bottom:map-nested-get-default($map,touch,cell-padding-bottom,2em);
+  $touch-cell-margin-top:map-nested-get-default($map,touch,cell-margin-top,1em);
+  $touch-cell-border-bottom:map-nested-get-default($map,touch,cell-border-bottom,1px solid #ddd);
+  $touch-font-size:map-nested-get-default($map,touch,font-size,16px);
+  $touch-border-radius:map-nested-get-default($map,touch,border-radius,0);
+  $touch-header-left:map-nested-get-default($map,touch,header-left,10px);
+  $touch-header-font:map-nested-get($map,touch,header-font);
+  $touch-header-font-color:map-nested-get($map,touch,header-font-color);
+
+  $tag:flex-table;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _flex-grid($component,$font-size,$border-radius,$_columns,$header-color,$header-font,$header-bold,$header-background,$header-icon-font,$header-icon-up,$header-icon-down,
+            $justification,$alignment,$cell-justification,$cell-alignment,$cell-padding,$cell-height,$cell-show-borders,$cell-background,$cell-background-alt,$cell-alt-type,
+            $footer-background, $touch-breakpoint, $touch-cell-padding,$touch-cell-padding-bottom,$touch-cell-margin-top,$touch-cell-border-bottom,
+            $touch-font-size,$touch-border-radius,$touch-header-left,cell-item);
+    @content;
+
+
+    @if length($columns) &gt; 0{
+      @include _flex-table-touch-headers($touch-breakpoint,$columns,$_columns,cell-item,$touch-header-font,$touch-header-font-color);
+    }
+
+  }
+ }" data-collapsed="@mixin flex-table($component, $tags, $class, $headers, $map) { ... }"><code>@mixin flex-table($component, $tags, $class, $headers, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$component</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$tags</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$headers</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>$map:( font-size:<value>, border-radius:<value>, columns:<value>, justification:<value>, alignment:<value>, header:( background:<value>, color:<value>, font:<value>, bold:<value>, icon-font:<value>, icon-up:<value>, icon-down:<value>), cell:( background:<value>, justification:<value>, alignment:<value>, padding:<value>, height:<value>, show-borders:<value>, background:<value>background-alt:<value>), footer:( background:<value>), touch:( breakpoint:<value>, cell-padding:<value>, cell-padding-bottom:<value>, cell-margin-top:<value>, cell-border-bottom:<value>, font-size:<value>, border-radius:<value>, header-left:<value>, header-font:<value>, header-font-color:<value>) )</value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></value></p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-grid"><code>_flex-grid</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_flex-table-touch-headers"><code>_flex-table-touch-headers</code></a></li></ul></p></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">Sass-flex-grid</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
