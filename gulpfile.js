@@ -3,7 +3,7 @@ var gulp=require('gulp');
 var sassdoc = require('sassdoc');
 
 gulp.task('default',function(){
-    console.log('echo sass animations...');
+    console.log('echo sass flex-grid...');
 });
 
 gulp.task('sassdoc', function () {
