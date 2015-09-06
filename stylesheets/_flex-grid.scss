@@ -550,7 +550,7 @@ $grid-tag:null
 ///   )
 /// )
 @mixin flex-grid($component:css-flex-grid,$tags:null,$class:null,$map:(),$columns:()){
-  
+
   $_white:map-get($Base,white);
   $_icon-font-family:map-get($Icons,font-family);
 
@@ -574,7 +574,7 @@ $grid-tag:null
   $cell-alignment:map-nested-get-default($map,cell,alignment,flex-start);
   $cell-padding:map-nested-get-default($map,cell,padding,.3em .5em .3em 1em);
   $cell-height:map-nested-get-default($map,cell,height,40px);
-  $cell-show-borders:map-nested-get-default($map,cell,show-borders,true);
+  $cell-show-borders:map-nested-get-default($map,cell,show-borders,false);
   $cell-background:map-nested-get-default($map,cell,background,$_white);
   $cell-background-alt:map-nested-get-default($map,cell,background-alt,#f5f5f5);
   $cell-alt-type:map-nested-get-default($map,cell,alt-type,even);
