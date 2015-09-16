@@ -233,7 +233,7 @@ $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-bor
     border-left:0 !important;
     padding-left:.5em;
     section{
-      &>grid-item{
+      &>#{$grid-tag}{
         padding-right:16px;
         font-size:14px;
         &:nth-of-type(n){
@@ -281,6 +281,11 @@ $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-bor
           background:$cell-background-alt;
         }
       }
+    }
+  }
+  footer{
+    &>column-footer{
+      width:$_column-percentage;
     }
   }
 }
@@ -422,8 +427,6 @@ $grid-tag:null
       }@else{
         @include _odd-cell-alt($columns,$cell-background-alt);
       }
-
-
     }
     &:empty{
       min-height:200px;
@@ -451,6 +454,17 @@ $grid-tag:null
     border-right:0 !important;
     border-left:0 !important;
     border-bottom:0 !important;
+    &[flex]{
+      @include flexbox($justification:$justification,$alignment:$alignment);
+      padding:0;
+    }
+    &>column-footer{
+      width:$_column-percentage;
+      padding:$cell-padding;
+      min-height:$cell-height;
+      max-height:$cell-height;
+      overflow:hidden;
+    }
   }
 
   &.breakpoint{

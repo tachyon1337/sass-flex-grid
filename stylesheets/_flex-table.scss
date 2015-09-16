@@ -131,7 +131,7 @@
   $header-icon-down:map-nested-get-default($map,header,icon-down,\e1a5);
   $justification:map-get-default($map,justification,flex-start);
   $alignment:map-get-default($map,alignment,center);
-  $cell-justification:map-nested-get-default($map,cell,justification,center);
+  $cell-justification:map-nested-get-default($map,cell,justification,flex-start);
   $cell-alignment:map-nested-get-default($map,cell,alignment,flex-start);
   $cell-padding:map-nested-get-default($map,cell,padding,.3em .5em .3em 1em);
   $cell-height:map-nested-get-default($map,cell,height,40px);
