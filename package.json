@@ -1,19 +1,19 @@
 {
   "name": "sass-flex-grid",
   "description": "Sass Flex Grid Component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "S. Francis",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tachyon1337/sass-flex-grid.git"
+    "url": "https://github.com/ellipticaljs/sass-flex-grid.git"
   },
   "dependencies": {
-    "sass-functions": "git+https://github.com/tachyon1337/sass-functions.git",
-    "sass-flexbox": "git+https://github.com/tachyon1337/sass-flexbox.git",
-    "sass-media-query": "git+https://github.com/tachyon1337/sass-media-query.git",
-    "sass-component": "git+https://github.com/tachyon1337/sass-component.git",
-    "sass-element-tag":"git+https://github.com/tachyon1337/sass-element-tag.git"
+    "sass-functions": "git+https://github.com/ellipticaljs/sass-functions.git",
+    "sass-flexbox": "git+https://github.com/ellipticaljs/sass-flexbox.git",
+    "sass-media-query": "git+https://github.com/ellipticaljs/sass-media-query.git",
+    "sass-component": "git+https://github.com/ellipticaljs/sass-component.git",
+    "sass-element-tag":"git+https://github.com/ellipticaljs/sass-element-tag.git"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
