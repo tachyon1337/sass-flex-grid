@@ -385,7 +385,7 @@ $grid-tag:null
       }
       &.down{
         &:after{
-          font-family:map-get($Icons,font-family);
+          font-family:content;
           content:'#{$header-icon-down}';
           font-size:12px;
           @if $header-color !=null{
@@ -565,8 +565,8 @@ $grid-tag:null
 /// )
 @mixin flex-grid($component:css-flex-grid,$tags:null,$class:null,$map:(),$columns:()){
 
-  $_white:map-get($Base,white);
-  $_icon-font-family:map-get($Icons,font-family);
+  $_white:#fff;
+  $_icon-font-family:content;
 
   $_columns:length($columns);
   @if $_columns==0{
@@ -580,8 +580,8 @@ $grid-tag:null
   $header-font:map-nested-get($map,header,font);
   $header-bold:map-nested-get($map,header,bold);
   $header-icon-font:map-nested-get-default($map,header,icon-font,$_icon-font-family);
-  $header-icon-up:map-nested-get-default($map,header,icon-up,\e1a6);
-  $header-icon-down:map-nested-get-default($map,header,icon-down,\e1a5);
+  $header-icon-up:map-nested-get-default($map,header,icon-up,\e613);
+  $header-icon-down:map-nested-get-default($map,header,icon-down,\e612);
   $justification:map-get-default($map,justification,flex-start);
   $alignment:map-get-default($map,alignment,center);
   $cell-justification:map-nested-get-default($map,cell,justification,center);

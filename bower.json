@@ -1,0 +1,44 @@
+{
+  "name": "sass-flex-grid",
+  "description": "Sass Flex Grid Component",
+  "version":"1.0.2",
+  "main": "dist/flex-grid.css",
+  "authors": [
+    "S. Francis"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "flex-grid",
+    "css"
+  ],
+  "homepage": "https://github.com/ellipticaljs/sass-flex-grid",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".gitignore",
+    ".npmignore",
+    "gulpfile.js",
+    "lib",
+    "docs",
+    "index.js",
+    "umd.js",
+    "package.json",
+    "demo",
+    "index.html",
+    "build.json",
+    "bundle.json",
+    ".nvmrc",
+    ".eslintrc",
+    "bin",
+    "CHANGELOG.md",
+    "demos",
+    "stylesheets",
+    "_index.scss",
+    "bk",
+    "sassdoc"
+  ]
+}
