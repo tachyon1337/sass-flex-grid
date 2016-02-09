@@ -1,6 +1,17 @@
 @import "variables";
 
 /// @access private
+@mixin _flex-gutter-bleed(){
+  $_column-gutter:$grid-column-gutter;
+
+  margin-right: - $_column-gutter/2 !important;
+  margin-left: - $_column-gutter/2 !important;
+  width:108%;
+  @content;
+}
+
+
+/// @access private
 @mixin _grid-pagination($component:null,
 $border-radius:null,
 $margin-right:null,
@@ -228,7 +239,7 @@ $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-bor
     }
   }
   @include media-breakpoint(600px){
-    @include gutter-bleed();
+    @include _flex-gutter-bleed();
     border-right:0 !important;
     border-left:0 !important;
     padding-left:.5em;
