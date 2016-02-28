@@ -27,20 +27,11 @@
 
 /// @access private
 @mixin _flex-table-touch-headers($breakpoint,$len,$tag,$font,$color){
-  &.breakpoint{
-    @include _flex-table-breakpoint($breakpoint,$len,$tag,$font,$color);
-  }
   &[breakpoint="1024"]{
     @include _flex-table-breakpoint(1024px,$len,$tag,$font,$color);
   }
-  &[breakpoint="950"]{
-    @include _flex-table-breakpoint(950px,$len,$tag,$font,$color);
-  }
   &[breakpoint="900"]{
     @include _flex-table-breakpoint(900px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="850"]{
-    @include _flex-table-breakpoint(850px,$len,$tag,$font,$color);
   }
   &[breakpoint="800"]{
     @include _flex-table-breakpoint(800px,$len,$tag,$font,$color);
@@ -50,9 +41,6 @@
   }
   &[breakpoint="700"]{
     @include _flex-table-breakpoint(700px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="650"]{
-    @include _flex-table-breakpoint(650px,$len,$tag,$font,$color);
   }
   &[breakpoint="600"]{
     @include _flex-table-breakpoint(600px,$len,$tag,$font,$color);

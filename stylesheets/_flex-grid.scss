@@ -151,20 +151,12 @@ $phone-info-font-size:null
 
 /// @access private
 @mixin _flex-grid-touch-columns($breakpoint,$len,$tag,$font,$color){
-  &.breakpoint{
-    @include _flex-grid-columns-breakpoint($breakpoint,$len,$tag,$font,$color);
-  }
+
   &[breakpoint="1024"]{
     @include _flex-grid-columns-breakpoint(1024px,$len,$tag,$font,$color);
   }
-  &[breakpoint="950"]{
-    @include _flex-grid-columns-breakpoint(950px,$len,$tag,$font,$color);
-  }
   &[breakpoint="900"]{
     @include _flex-grid-columns-breakpoint(900px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="850"]{
-    @include _flex-grid-columns-breakpoint(850px,$len,$tag,$font,$color);
   }
   &[breakpoint="800"]{
     @include _flex-grid-columns-breakpoint(800px,$len,$tag,$font,$color);
@@ -174,9 +166,6 @@ $phone-info-font-size:null
   }
   &[breakpoint="700"]{
     @include _flex-grid-columns-breakpoint(700px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="650"]{
-    @include _flex-grid-columns-breakpoint(650px,$len,$tag,$font,$color);
   }
   &[breakpoint="600"]{
     @include _flex-grid-columns-breakpoint(600px,$len,$tag,$font,$color);
@@ -472,25 +461,13 @@ $grid-tag:null
     }
   }
 
-  &.breakpoint{
-    @include _flex-grid-breakpoint($touch-breakpoint,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
-
   &[breakpoint="1024"]{
     @include _flex-grid-breakpoint(1000px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
   }
-  &[breakpoint="950"]{
-    @include _flex-grid-breakpoint(950px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
+
   &[breakpoint="900"]{
     @include _flex-grid-breakpoint(900px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
-  &[breakpoint="850"]{
-    @include _flex-grid-breakpoint(850px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
   }
   &[breakpoint="800"]{
@@ -505,18 +482,12 @@ $grid-tag:null
     @include _flex-grid-breakpoint(700px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
   }
-  &[breakpoint="650"]{
-    @include _flex-grid-breakpoint(650px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
   &[breakpoint="600"]{
     @include _flex-grid-breakpoint(600px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
   }
 
 }
-
-
 
 /// @access public
 /// @param {String} $component
