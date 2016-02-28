@@ -3,14 +3,14 @@
 
 
 /// @access private
-@mixin _flex-table-breakpoint($breakpoint,$headers,$len,$tag,$font,$color){
+@mixin _flex-table-breakpoint($breakpoint,$len,$tag,$font,$color){
   @include media-breakpoint($breakpoint){
     section {
       #{$tag} {
         @for $i from 1 through $len{
           &:nth-of-type(#{$len}n + #{$i}){
             &:before{
-              content: '#{nth($headers,$i)}';
+              content: 'attr(data-header)';
               @if $font !=null{
                 font-family:$font;
               }
@@ -26,36 +26,36 @@
 }
 
 /// @access private
-@mixin _flex-table-touch-headers($breakpoint,$headers,$len,$tag,$font,$color){
+@mixin _flex-table-touch-headers($breakpoint,$len,$tag,$font,$color){
   &.breakpoint{
-    @include _flex-table-breakpoint($breakpoint,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint($breakpoint,$len,$tag,$font,$color);
   }
   &[breakpoint="1024"]{
-    @include _flex-table-breakpoint(1024px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(1024px,$len,$tag,$font,$color);
   }
   &[breakpoint="950"]{
-    @include _flex-table-breakpoint(950px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(950px,$len,$tag,$font,$color);
   }
   &[breakpoint="900"]{
-    @include _flex-table-breakpoint(900px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(900px,$len,$tag,$font,$color);
   }
   &[breakpoint="850"]{
-    @include _flex-table-breakpoint(850px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(850px,$len,$tag,$font,$color);
   }
   &[breakpoint="800"]{
-    @include _flex-table-breakpoint(800px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(800px,$len,$tag,$font,$color);
   }
   &[breakpoint="768"]{
-    @include _flex-table-breakpoint(768px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(768px,$len,$tag,$font,$color);
   }
   &[breakpoint="700"]{
-    @include _flex-table-breakpoint(700px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(700px,$len,$tag,$font,$color);
   }
   &[breakpoint="650"]{
-    @include _flex-table-breakpoint(650px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(650px,$len,$tag,$font,$color);
   }
   &[breakpoint="600"]{
-    @include _flex-table-breakpoint(600px,$headers,$len,$tag,$font,$color);
+    @include _flex-table-breakpoint(600px,$len,$tag,$font,$color);
   }
 }
 
@@ -108,15 +108,12 @@
 ///        header-font-color:<value>
 ///   )
 /// )
-@mixin flex-table($component:css-flex-table,$tags:null,$class:null,$columns:(),$map:()){
+@mixin flex-table($component:css-flex-table,$tags:null,$class:null,$map:()){
 
   $_white:#fff;
   $_icon-font-family:content;
 
-  $_columns:length($columns);
-  @if $_columns==0{
-    $_columns:map-get-default($map,column-count,4);
-  }
+  $_columns:map-get-default($map,columns,4);
   $touch-breakpoint:map-get-default($map,breakpoint,750px);
 
   $font-size:map-get-default($map,font-size,1em);
@@ -158,9 +155,11 @@
             $touch-font-size,$touch-border-radius,$touch-header-left,cell-item);
     @content;
 
-
-    @if length($columns) > 0{
-      @include _flex-table-touch-headers($touch-breakpoint,$columns,$_columns,cell-item,$touch-header-font,$touch-header-font-color);
+    $_max-columns:8;
+    @for $j from 2 through $_max-columns{
+      &[columns="#{$j}"]{
+        @include _flex-table-touch-headers($touch-breakpoint,$j,cell-item,$touch-header-font,$touch-header-font-color);
+      }
     }
 
   }

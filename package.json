@@ -1,7 +1,7 @@
 {
   "name": "sass-flex-grid",
   "description": "Sass Flex Grid Component",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "S. Francis",
   "license": "MIT",
   "repository": {
@@ -18,6 +18,9 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "sassdoc": "^2.1.15",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^2.1.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-minify-css": "^1.2.2"
   }
 }
