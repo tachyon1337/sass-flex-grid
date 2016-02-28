@@ -18,20 +18,32 @@ gulp.task('sassdoc', function () {
 });
 
 gulp.task('dist', function () {
-    compileSass();
+    compileSass('flex.grid.scss');
+    compileSass('flex.table.scss');
 });
 
 gulp.task('minify',function(){
-    concatStream('./dist/flex.grid.css','flex.grid.min.css')
-        .pipe(minify())
-        .pipe(gulp.dest('./dist'));
+    minifyGrid();
+    minifyTable();
 });
 
 
 ///private
-function compileSass(){
-    gulp.src('./src/flex.grid.scss')
+function compileSass(src){
+    gulp.src('./src/' + src)
         .pipe(sass())
+        .pipe(gulp.dest('./dist'));
+}
+
+function minifyGrid(){
+    concatStream('./dist/flex.grid.css','flex.grid.min.css')
+        .pipe(minify())
+        .pipe(gulp.dest('./dist'));
+}
+
+function minifyTable(){
+    concatStream('./dist/flex.table.css','flex.table.min.css')
+        .pipe(minify())
         .pipe(gulp.dest('./dist'));
 }
 

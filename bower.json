@@ -1,7 +1,7 @@
 {
   "name": "sass-flex-grid",
   "description": "Sass Flex Grid Component",
-  "version":"1.1.0",
+  "version":"1.1.1",
   "main": "dist/flex-grid.css",
   "authors": [
     "S. Francis"

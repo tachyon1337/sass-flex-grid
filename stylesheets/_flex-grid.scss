@@ -568,7 +568,7 @@ $grid-tag:null
 ///        header-font-color:<value>
 ///   )
 /// )
-@mixin flex-grid($component:css-flex-grid,$tags:null,$class:null,$map:()){
+@mixin flex-grid($component:css-flex-grid,$tags:(),$class:null,$map:()){
 
   $_white:#fff;
   $_icon-font-family:content;
