@@ -533,463 +533,463 @@ flex-table {
           left: 16px; } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="2"][breakpoint="1024"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="1024"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="2"][breakpoint="900"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="900"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="2"][breakpoint="800"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="800"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="2"][breakpoint="768"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="768"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="2"][breakpoint="700"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="700"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="2"][breakpoint="600"] section cell-item:nth-of-type(2n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="2"][breakpoint="600"] section cell-item:nth-of-type(2n + 2):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="3"][breakpoint="1024"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="1024"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="1024"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="3"][breakpoint="900"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="900"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="900"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="3"][breakpoint="768"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="768"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="768"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 3):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="4"][breakpoint="1024"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="1024"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="1024"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="1024"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="4"][breakpoint="900"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="900"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="900"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="900"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 4):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 5):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 6):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 7):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 900px) {
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 800px) {
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 700px) {
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 1):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 2):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 3):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 4):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 5):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 6):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 7):before {
-      content: 'attr(data-header)'; }
+      content: attr(data-header); }
     flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 8):before {
-      content: 'attr(data-header)'; } }
+      content: attr(data-header); } }

@@ -10,7 +10,7 @@
         @for $i from 1 through $len{
           &:nth-of-type(#{$len}n + #{$i}){
             &:before{
-              content: 'attr(data-header)';
+              content: attr(data-header);
               @if $font !=null{
                 font-family:$font;
               }
