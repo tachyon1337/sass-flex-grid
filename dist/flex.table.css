@@ -109,118 +109,6 @@ flex-table {
         @media only screen and (max-width: 640px) {
           flex-table section:empty:after {
             font-size: .9em; } }
-  flex-table[columns="2"] > header > * {
-    width: 50%; }
-  flex-table[columns="2"] section > cell-item {
-    width: 50%; }
-    flex-table[columns="2"] section > cell-item:nth-of-type(4n + 3) {
-      background: #f5f5f5; }
-    flex-table[columns="2"] section > cell-item:nth-of-type(4n + 4) {
-      background: #f5f5f5; }
-  flex-table[columns="2"] footer > column-footer {
-    width: 50%; }
-  flex-table[columns="3"] > header > * {
-    width: 33.33333%; }
-  flex-table[columns="3"] section > cell-item {
-    width: 33.33333%; }
-    flex-table[columns="3"] section > cell-item:nth-of-type(6n + 4) {
-      background: #f5f5f5; }
-    flex-table[columns="3"] section > cell-item:nth-of-type(6n + 5) {
-      background: #f5f5f5; }
-    flex-table[columns="3"] section > cell-item:nth-of-type(6n + 6) {
-      background: #f5f5f5; }
-  flex-table[columns="3"] footer > column-footer {
-    width: 33.33333%; }
-  flex-table[columns="4"] > header > * {
-    width: 25%; }
-  flex-table[columns="4"] section > cell-item {
-    width: 25%; }
-    flex-table[columns="4"] section > cell-item:nth-of-type(8n + 5) {
-      background: #f5f5f5; }
-    flex-table[columns="4"] section > cell-item:nth-of-type(8n + 6) {
-      background: #f5f5f5; }
-    flex-table[columns="4"] section > cell-item:nth-of-type(8n + 7) {
-      background: #f5f5f5; }
-    flex-table[columns="4"] section > cell-item:nth-of-type(8n + 8) {
-      background: #f5f5f5; }
-  flex-table[columns="4"] footer > column-footer {
-    width: 25%; }
-  flex-table[columns="5"] > header > * {
-    width: 20%; }
-  flex-table[columns="5"] section > cell-item {
-    width: 20%; }
-    flex-table[columns="5"] section > cell-item:nth-of-type(10n + 6) {
-      background: #f5f5f5; }
-    flex-table[columns="5"] section > cell-item:nth-of-type(10n + 7) {
-      background: #f5f5f5; }
-    flex-table[columns="5"] section > cell-item:nth-of-type(10n + 8) {
-      background: #f5f5f5; }
-    flex-table[columns="5"] section > cell-item:nth-of-type(10n + 9) {
-      background: #f5f5f5; }
-    flex-table[columns="5"] section > cell-item:nth-of-type(10n + 10) {
-      background: #f5f5f5; }
-  flex-table[columns="5"] footer > column-footer {
-    width: 20%; }
-  flex-table[columns="6"] > header > * {
-    width: 16.66667%; }
-  flex-table[columns="6"] section > cell-item {
-    width: 16.66667%; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 7) {
-      background: #f5f5f5; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 8) {
-      background: #f5f5f5; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 9) {
-      background: #f5f5f5; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 10) {
-      background: #f5f5f5; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 11) {
-      background: #f5f5f5; }
-    flex-table[columns="6"] section > cell-item:nth-of-type(12n + 12) {
-      background: #f5f5f5; }
-  flex-table[columns="6"] footer > column-footer {
-    width: 16.66667%; }
-  flex-table[columns="7"] > header > * {
-    width: 14.28571%; }
-  flex-table[columns="7"] section > cell-item {
-    width: 14.28571%; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 8) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 9) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 10) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 11) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 12) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 13) {
-      background: #f5f5f5; }
-    flex-table[columns="7"] section > cell-item:nth-of-type(14n + 14) {
-      background: #f5f5f5; }
-  flex-table[columns="7"] footer > column-footer {
-    width: 14.28571%; }
-  flex-table[columns="8"] > header > * {
-    width: 12.5%; }
-  flex-table[columns="8"] section > cell-item {
-    width: 12.5%; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 9) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 10) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 11) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 12) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 13) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 14) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 15) {
-      background: #f5f5f5; }
-    flex-table[columns="8"] section > cell-item:nth-of-type(16n + 16) {
-      background: #f5f5f5; }
-  flex-table[columns="8"] footer > column-footer {
-    width: 12.5%; }
   flex-table footer {
     background: #fff;
     position: relative;
@@ -243,7 +131,7 @@ flex-table {
       min-height: 40px;
       max-height: 40px;
       overflow: hidden; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1024px) {
     flex-table[breakpoint="1024"] {
       border-radius: 0; }
       flex-table[breakpoint="1024"] > header {
@@ -278,7 +166,7 @@ flex-table {
             border-bottom: 1px solid #ddd !important; }
           flex-table[breakpoint="1024"] section > cell-item:last-of-type {
             border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     flex-table[breakpoint="1024"] {
       margin-right: -15px !important;
       margin-left: -15px !important;
@@ -326,7 +214,7 @@ flex-table {
             border-bottom: 1px solid #ddd !important; }
           flex-table[breakpoint="900"] section > cell-item:last-of-type {
             border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     flex-table[breakpoint="900"] {
       margin-right: -15px !important;
       margin-left: -15px !important;
@@ -338,54 +226,6 @@ flex-table {
         padding-right: 16px;
         font-size: 14px; }
         flex-table[breakpoint="900"] section > cell-item:nth-of-type(n):before {
-          left: 16px; } }
-  @media only screen and (max-width: 800px) {
-    flex-table[breakpoint="800"] {
-      border-radius: 0; }
-      flex-table[breakpoint="800"] > header {
-        display: none; }
-      flex-table[breakpoint="800"] section {
-        font-size: 16px;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start;
-        -webkit-align-items: flex-start;
-        align-items: flex-start; }
-        flex-table[breakpoint="800"] section > cell-item {
-          border-right: 0 !important;
-          width: 100%;
-          padding: 0 0.5em 1em 11em; }
-          flex-table[breakpoint="800"] section > cell-item:nth-of-type(n) {
-            background: none; }
-            flex-table[breakpoint="800"] section > cell-item:nth-of-type(n):before {
-              position: absolute;
-              top: 0;
-              left: 10px; }
-          flex-table[breakpoint="800"] section > cell-item:nth-of-type(4n+1) {
-            margin-top: 1em; }
-          flex-table[breakpoint="800"] section > cell-item:nth-of-type(4n+4) {
-            padding-bottom: 2em;
-            border-top: 0 !important;
-            border-left: 0 !important;
-            border-right: 0 !important;
-            border-bottom: 1px solid #ddd !important; }
-          flex-table[breakpoint="800"] section > cell-item:last-of-type {
-            border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
-    flex-table[breakpoint="800"] {
-      margin-right: -15px !important;
-      margin-left: -15px !important;
-      width: 108%;
-      border-right: 0 !important;
-      border-left: 0 !important;
-      padding-left: .5em; }
-      flex-table[breakpoint="800"] section > cell-item {
-        padding-right: 16px;
-        font-size: 14px; }
-        flex-table[breakpoint="800"] section > cell-item:nth-of-type(n):before {
           left: 16px; } }
   @media only screen and (max-width: 768px) {
     flex-table[breakpoint="768"] {
@@ -422,7 +262,7 @@ flex-table {
             border-bottom: 1px solid #ddd !important; }
           flex-table[breakpoint="768"] section > cell-item:last-of-type {
             border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     flex-table[breakpoint="768"] {
       margin-right: -15px !important;
       margin-left: -15px !important;
@@ -435,12 +275,12 @@ flex-table {
         font-size: 14px; }
         flex-table[breakpoint="768"] section > cell-item:nth-of-type(n):before {
           left: 16px; } }
-  @media only screen and (max-width: 700px) {
-    flex-table[breakpoint="700"] {
+  @media only screen and (max-width: 640px) {
+    flex-table[breakpoint="640"] {
       border-radius: 0; }
-      flex-table[breakpoint="700"] > header {
+      flex-table[breakpoint="640"] > header {
         display: none; }
-      flex-table[breakpoint="700"] section {
+      flex-table[breakpoint="640"] section {
         font-size: 16px;
         display: -webkit-flex;
         display: flex;
@@ -450,86 +290,38 @@ flex-table {
         justify-content: flex-start;
         -webkit-align-items: flex-start;
         align-items: flex-start; }
-        flex-table[breakpoint="700"] section > cell-item {
+        flex-table[breakpoint="640"] section > cell-item {
           border-right: 0 !important;
           width: 100%;
           padding: 0 0.5em 1em 11em; }
-          flex-table[breakpoint="700"] section > cell-item:nth-of-type(n) {
+          flex-table[breakpoint="640"] section > cell-item:nth-of-type(n) {
             background: none; }
-            flex-table[breakpoint="700"] section > cell-item:nth-of-type(n):before {
+            flex-table[breakpoint="640"] section > cell-item:nth-of-type(n):before {
               position: absolute;
               top: 0;
               left: 10px; }
-          flex-table[breakpoint="700"] section > cell-item:nth-of-type(4n+1) {
+          flex-table[breakpoint="640"] section > cell-item:nth-of-type(4n+1) {
             margin-top: 1em; }
-          flex-table[breakpoint="700"] section > cell-item:nth-of-type(4n+4) {
+          flex-table[breakpoint="640"] section > cell-item:nth-of-type(4n+4) {
             padding-bottom: 2em;
             border-top: 0 !important;
             border-left: 0 !important;
             border-right: 0 !important;
             border-bottom: 1px solid #ddd !important; }
-          flex-table[breakpoint="700"] section > cell-item:last-of-type {
+          flex-table[breakpoint="640"] section > cell-item:last-of-type {
             border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
-    flex-table[breakpoint="700"] {
+  @media only screen and (max-width: 640px) {
+    flex-table[breakpoint="640"] {
       margin-right: -15px !important;
       margin-left: -15px !important;
       width: 108%;
       border-right: 0 !important;
       border-left: 0 !important;
       padding-left: .5em; }
-      flex-table[breakpoint="700"] section > cell-item {
+      flex-table[breakpoint="640"] section > cell-item {
         padding-right: 16px;
         font-size: 14px; }
-        flex-table[breakpoint="700"] section > cell-item:nth-of-type(n):before {
-          left: 16px; } }
-  @media only screen and (max-width: 600px) {
-    flex-table[breakpoint="600"] {
-      border-radius: 0; }
-      flex-table[breakpoint="600"] > header {
-        display: none; }
-      flex-table[breakpoint="600"] section {
-        font-size: 16px;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: flex-start;
-        justify-content: flex-start;
-        -webkit-align-items: flex-start;
-        align-items: flex-start; }
-        flex-table[breakpoint="600"] section > cell-item {
-          border-right: 0 !important;
-          width: 100%;
-          padding: 0 0.5em 1em 11em; }
-          flex-table[breakpoint="600"] section > cell-item:nth-of-type(n) {
-            background: none; }
-            flex-table[breakpoint="600"] section > cell-item:nth-of-type(n):before {
-              position: absolute;
-              top: 0;
-              left: 10px; }
-          flex-table[breakpoint="600"] section > cell-item:nth-of-type(4n+1) {
-            margin-top: 1em; }
-          flex-table[breakpoint="600"] section > cell-item:nth-of-type(4n+4) {
-            padding-bottom: 2em;
-            border-top: 0 !important;
-            border-left: 0 !important;
-            border-right: 0 !important;
-            border-bottom: 1px solid #ddd !important; }
-          flex-table[breakpoint="600"] section > cell-item:last-of-type {
-            border-bottom: 0 !important; } }
-  @media only screen and (max-width: 600px) {
-    flex-table[breakpoint="600"] {
-      margin-right: -15px !important;
-      margin-left: -15px !important;
-      width: 108%;
-      border-right: 0 !important;
-      border-left: 0 !important;
-      padding-left: .5em; }
-      flex-table[breakpoint="600"] section > cell-item {
-        padding-right: 16px;
-        font-size: 14px; }
-        flex-table[breakpoint="600"] section > cell-item:nth-of-type(n):before {
+        flex-table[breakpoint="640"] section > cell-item:nth-of-type(n):before {
           left: 16px; } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="2"][breakpoint="1024"] section cell-item:nth-of-type(2n + 1):before {
@@ -541,25 +333,15 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="2"][breakpoint="900"] section cell-item:nth-of-type(2n + 2):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="2"][breakpoint="800"] section cell-item:nth-of-type(2n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="2"][breakpoint="800"] section cell-item:nth-of-type(2n + 2):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="2"][breakpoint="768"] section cell-item:nth-of-type(2n + 1):before {
       content: attr(data-header); }
     flex-table[columns="2"][breakpoint="768"] section cell-item:nth-of-type(2n + 2):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="2"][breakpoint="700"] section cell-item:nth-of-type(2n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="2"][breakpoint="700"] section cell-item:nth-of-type(2n + 2):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="2"][breakpoint="600"] section cell-item:nth-of-type(2n + 1):before {
+    flex-table[columns="2"][breakpoint="640"] section cell-item:nth-of-type(2n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="2"][breakpoint="600"] section cell-item:nth-of-type(2n + 2):before {
+    flex-table[columns="2"][breakpoint="640"] section cell-item:nth-of-type(2n + 2):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="3"][breakpoint="1024"] section cell-item:nth-of-type(3n + 1):before {
@@ -575,13 +357,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="3"][breakpoint="900"] section cell-item:nth-of-type(3n + 3):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="800"] section cell-item:nth-of-type(3n + 3):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="3"][breakpoint="768"] section cell-item:nth-of-type(3n + 1):before {
       content: attr(data-header); }
@@ -589,19 +364,12 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="3"][breakpoint="768"] section cell-item:nth-of-type(3n + 3):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="700"] section cell-item:nth-of-type(3n + 3):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 1):before {
+    flex-table[columns="3"][breakpoint="640"] section cell-item:nth-of-type(3n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 2):before {
+    flex-table[columns="3"][breakpoint="640"] section cell-item:nth-of-type(3n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="3"][breakpoint="600"] section cell-item:nth-of-type(3n + 3):before {
+    flex-table[columns="3"][breakpoint="640"] section cell-item:nth-of-type(3n + 3):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="4"][breakpoint="1024"] section cell-item:nth-of-type(4n + 1):before {
@@ -621,15 +389,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="4"][breakpoint="900"] section cell-item:nth-of-type(4n + 4):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="800"] section cell-item:nth-of-type(4n + 4):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 1):before {
       content: attr(data-header); }
@@ -639,23 +398,14 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="4"][breakpoint="768"] section cell-item:nth-of-type(4n + 4):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="700"] section cell-item:nth-of-type(4n + 4):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 1):before {
+    flex-table[columns="4"][breakpoint="640"] section cell-item:nth-of-type(4n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 2):before {
+    flex-table[columns="4"][breakpoint="640"] section cell-item:nth-of-type(4n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 3):before {
+    flex-table[columns="4"][breakpoint="640"] section cell-item:nth-of-type(4n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="4"][breakpoint="600"] section cell-item:nth-of-type(4n + 4):before {
+    flex-table[columns="4"][breakpoint="640"] section cell-item:nth-of-type(4n + 4):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="5"][breakpoint="1024"] section cell-item:nth-of-type(5n + 1):before {
@@ -679,17 +429,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="5"][breakpoint="900"] section cell-item:nth-of-type(5n + 5):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="800"] section cell-item:nth-of-type(5n + 5):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 1):before {
       content: attr(data-header); }
@@ -701,27 +440,16 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="5"][breakpoint="768"] section cell-item:nth-of-type(5n + 5):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="700"] section cell-item:nth-of-type(5n + 5):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 1):before {
+    flex-table[columns="5"][breakpoint="640"] section cell-item:nth-of-type(5n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 2):before {
+    flex-table[columns="5"][breakpoint="640"] section cell-item:nth-of-type(5n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 3):before {
+    flex-table[columns="5"][breakpoint="640"] section cell-item:nth-of-type(5n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 4):before {
+    flex-table[columns="5"][breakpoint="640"] section cell-item:nth-of-type(5n + 4):before {
       content: attr(data-header); }
-    flex-table[columns="5"][breakpoint="600"] section cell-item:nth-of-type(5n + 5):before {
+    flex-table[columns="5"][breakpoint="640"] section cell-item:nth-of-type(5n + 5):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="6"][breakpoint="1024"] section cell-item:nth-of-type(6n + 1):before {
@@ -749,19 +477,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="6"][breakpoint="900"] section cell-item:nth-of-type(6n + 6):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 5):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="800"] section cell-item:nth-of-type(6n + 6):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 1):before {
       content: attr(data-header); }
@@ -775,31 +490,18 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="6"][breakpoint="768"] section cell-item:nth-of-type(6n + 6):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 5):before {
-      content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="700"] section cell-item:nth-of-type(6n + 6):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 1):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 2):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 3):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 4):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 4):before {
       content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 5):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 5):before {
       content: attr(data-header); }
-    flex-table[columns="6"][breakpoint="600"] section cell-item:nth-of-type(6n + 6):before {
+    flex-table[columns="6"][breakpoint="640"] section cell-item:nth-of-type(6n + 6):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="7"][breakpoint="1024"] section cell-item:nth-of-type(7n + 1):before {
@@ -831,21 +533,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="7"][breakpoint="900"] section cell-item:nth-of-type(7n + 7):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 5):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 6):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="800"] section cell-item:nth-of-type(7n + 7):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 1):before {
       content: attr(data-header); }
@@ -861,35 +548,20 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="7"][breakpoint="768"] section cell-item:nth-of-type(7n + 7):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 5):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 6):before {
-      content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="700"] section cell-item:nth-of-type(7n + 7):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 1):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 2):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 3):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 4):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 4):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 5):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 5):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 6):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 6):before {
       content: attr(data-header); }
-    flex-table[columns="7"][breakpoint="600"] section cell-item:nth-of-type(7n + 7):before {
+    flex-table[columns="7"][breakpoint="640"] section cell-item:nth-of-type(7n + 7):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 1024px) {
     flex-table[columns="8"][breakpoint="1024"] section cell-item:nth-of-type(8n + 1):before {
@@ -925,23 +597,6 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="8"][breakpoint="900"] section cell-item:nth-of-type(8n + 8):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 800px) {
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 1):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 2):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 3):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 4):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 5):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 6):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 7):before {
-      content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="800"] section cell-item:nth-of-type(8n + 8):before {
-      content: attr(data-header); } }
   @media only screen and (max-width: 768px) {
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 1):before {
       content: attr(data-header); }
@@ -959,37 +614,180 @@ flex-table {
       content: attr(data-header); }
     flex-table[columns="8"][breakpoint="768"] section cell-item:nth-of-type(8n + 8):before {
       content: attr(data-header); } }
-  @media only screen and (max-width: 700px) {
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 1):before {
+  @media only screen and (max-width: 600px) {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 2):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 3):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 4):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 4):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 5):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 5):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 6):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 6):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 7):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 7):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="700"] section cell-item:nth-of-type(8n + 8):before {
+    flex-table[columns="8"][breakpoint="640"] section cell-item:nth-of-type(8n + 8):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 1024px) {
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="1024"] section cell-item:nth-of-type(9n + 9):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 900px) {
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="900"] section cell-item:nth-of-type(9n + 9):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 768px) {
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="768"] section cell-item:nth-of-type(9n + 9):before {
       content: attr(data-header); } }
   @media only screen and (max-width: 600px) {
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 1):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 1):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 2):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 2):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 3):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 3):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 4):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 4):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 5):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 5):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 6):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 6):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 7):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 7):before {
       content: attr(data-header); }
-    flex-table[columns="8"][breakpoint="600"] section cell-item:nth-of-type(8n + 8):before {
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="9"][breakpoint="640"] section cell-item:nth-of-type(9n + 9):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 1024px) {
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 9):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="1024"] section cell-item:nth-of-type(10n + 10):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 900px) {
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 9):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="900"] section cell-item:nth-of-type(10n + 10):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 768px) {
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 9):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="768"] section cell-item:nth-of-type(10n + 10):before {
+      content: attr(data-header); } }
+  @media only screen and (max-width: 600px) {
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 1):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 2):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 3):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 4):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 5):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 6):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 7):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 8):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 9):before {
+      content: attr(data-header); }
+    flex-table[columns="10"][breakpoint="640"] section cell-item:nth-of-type(10n + 10):before {
       content: attr(data-header); } }

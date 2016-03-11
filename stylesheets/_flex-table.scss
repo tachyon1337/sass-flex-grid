@@ -33,16 +33,10 @@
   &[breakpoint="900"]{
     @include _flex-table-breakpoint(900px,$len,$tag,$font,$color);
   }
-  &[breakpoint="800"]{
-    @include _flex-table-breakpoint(800px,$len,$tag,$font,$color);
-  }
   &[breakpoint="768"]{
     @include _flex-table-breakpoint(768px,$len,$tag,$font,$color);
   }
-  &[breakpoint="700"]{
-    @include _flex-table-breakpoint(700px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="600"]{
+  &[breakpoint="640"]{
     @include _flex-table-breakpoint(600px,$len,$tag,$font,$color);
   }
 }
@@ -143,7 +137,7 @@
             $touch-font-size,$touch-border-radius,$touch-header-left,cell-item);
     @content;
 
-    $_max-columns:8;
+    $_max-columns:10;
     @for $j from 2 through $_max-columns{
       &[columns="#{$j}"]{
         @include _flex-table-touch-headers($touch-breakpoint,$j,cell-item,$touch-header-font,$touch-header-font-color);
