@@ -2297,7 +2297,8 @@ grid-pagination {
       text-shadow: none !important; }
       @media only screen and (max-width: 640px) {
         grid-pagination > page-info span[refresh] {
-          margin-left: .3em; } }
+          margin-left: .3em;
+          margin-right: 0; } }
       grid-pagination > page-info span[refresh]:hover {
         text-shadow: none !important;
         cursor: pointer; }
