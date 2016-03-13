@@ -1,3 +1,2 @@
 @import "../index";
-
-@include flex-table();
+@include flex-grid($map:(tag:flex-table,cell:(tag:cell-item)));

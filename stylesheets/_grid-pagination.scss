@@ -1,0 +1,141 @@
+/// @access private
+@mixin _grid-pagination($component:null,
+$border-radius:null,
+$margin-right:null,
+$show-pages-border:null,
+$font:null,
+$phone-info-font-size:null
+
+){
+  $_max-pages:12;
+  $_breakpoint:900px;
+  $_small-breakpoint:640px;
+
+  @include flexbox($justification:space-between,$alignment:center);
+  &>page-navigation{
+    @include flexbox($justification:flex-start,$alignment:center);
+    a{
+      @include flexbox($justification:center,$alignment:center);
+      margin-right:$margin-right;
+      height:32px;
+      width:32px;
+      font-size:16px;
+      @if $font !=null{
+        font-family:$font;
+      }
+      @extend %#{$component}-background !optional;
+      &.control{
+        border-radius:$border-radius;
+        @extend %#{$component}-border !optional;
+        @extend %#{$component}-font !optional;
+        span{
+          @extend %#{$component}-font !optional;
+        }
+        @include media-breakpoint($_breakpoint){
+          &:nth-of-type(2){
+            margin-right:.5em;
+          }
+        }
+
+      }
+      &.page{
+        @extend %#{$component}-font !optional;
+        text-shadow:none !important;
+        @if($show-pages-border==true){
+          @extend %#{$component}-border !optional;
+          border-radius:$border-radius;
+        }
+        &:hover{
+          border-radius:$border-radius;
+          span{
+            text-shadow:none !important;
+          }
+        }
+        &.active{
+          @extend %#{$component}-background-hover !optional;
+          @extend %#{$component}-border-hover !optional;
+          @extend %#{$component}-font-hover !optional;
+          border-radius:$border-radius;
+        }
+        display:none;
+        @for $j from 1 through $_max-pages{
+          &:nth-of-type(#{$j}) {
+            display:inherit;
+          }
+        }
+        @include media-breakpoint($_breakpoint){
+          display:none !important;
+        }
+      }
+      &:hover{
+        @extend %#{$component}-background-hover !optional;
+        @extend %#{$component}-border-hover !optional;
+        @extend %#{$component}-font-hover !optional;
+        span{
+          @extend %#{$component}-font-hover !optional;
+        }
+      }
+    }
+  }
+
+  &>page-info{
+    @include flexbox($justification:flex-start,$alignment:center);
+    div{
+      font-size:16px;
+      @include media-breakpoint($_small-breakpoint){
+        font-size:$phone-info-font-size;
+      }
+      @extend %#{$component}-font !optional;
+      text-shadow:none !important;
+      @if $font !=null{
+        font-family:$font;
+      }
+    }
+    span{
+      &[refresh]{
+        margin-left:2em;
+        font-size:32px;
+        @include media-breakpoint($_small-breakpoint){
+          margin-left:.3em;
+        }
+        @extend %#{$component}-icon !optional;
+        text-shadow:none !important;
+        &:hover{
+          @extend %#{$component}-icon-hover !optional;
+          text-shadow:none !important;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+};
+
+
+
+/// @access public
+/// @param {String} $component
+/// @param {List} $tags
+/// @param {String} $class
+/// @param {Map} $map
+///  $map:(
+///   border-radius:<value>,
+///   margin-right:<value>,
+///   show-pages-border:<value>,
+///   font:<value>,
+///   phone:(
+///     info-font-size:<value>
+///   )
+/// )
+@mixin grid-pagination($component:css-grid-pagination,$tags:null,$class:null,$map:()){
+
+  $border-radius:map-get-default($map,border-radius,50%);
+  $margin-right:map-get-default($map,margin-right,.25em);
+  $show-pages-border:map-get-default($map,show-pages-border,false);
+  $font:map-get($map,font);
+  $phone-info-font-size:map-nested-get-default($map,phone,info-font-size,14px);
+  $tag:grid-pagination;
+  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
+    @include _grid-pagination($component,$border-radius,$margin-right,$show-pages-border,$font,$phone-info-font-size);
+    @content;
+  }
+}

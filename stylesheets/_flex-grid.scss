@@ -1,288 +1,11 @@
-@import "variables";
+@import "grid-mixins";
+@import "grid-pagination";
 
-/// @access private
-@mixin _flex-gutter-bleed(){
-  $_column-gutter:$grid-column-gutter;
-
-  margin-right: - $_column-gutter/2 !important;
-  margin-left: - $_column-gutter/2 !important;
-  width:108%;
-  @content;
-}
-
-
-/// @access private
-@mixin _grid-pagination($component:null,
-$border-radius:null,
-$margin-right:null,
-$show-pages-border:null,
-$font:null,
-$phone-info-font-size:null
-
-){
-  $_max-pages:12;
-  $_breakpoint:900px;
-  $_small-breakpoint:640px;
-
-  @include flexbox($justification:space-between,$alignment:center);
-  &>page-navigation{
-    @include flexbox($justification:flex-start,$alignment:center);
-    a{
-      @include flexbox($justification:center,$alignment:center);
-      margin-right:$margin-right;
-      height:32px;
-      width:32px;
-      font-size:16px;
-      @if $font !=null{
-        font-family:$font;
-      }
-      @extend %#{$component}-background !optional;
-      &.control{
-        border-radius:$border-radius;
-        @extend %#{$component}-border !optional;
-        @extend %#{$component}-font !optional;
-        span{
-          @extend %#{$component}-font !optional;
-        }
-        @include media-breakpoint($_breakpoint){
-          &:nth-of-type(2){
-            margin-right:.5em;
-          }
-        }
-
-      }
-      &.page{
-        @extend %#{$component}-font !optional;
-        text-shadow:none !important;
-        @if($show-pages-border==true){
-          @extend %#{$component}-border !optional;
-          border-radius:$border-radius;
-        }
-        &:hover{
-          border-radius:$border-radius;
-          span{
-            text-shadow:none !important;
-          }
-        }
-        &.active{
-          @extend %#{$component}-background-hover !optional;
-          @extend %#{$component}-border-hover !optional;
-          @extend %#{$component}-font-hover !optional;
-          border-radius:$border-radius;
-        }
-        display:none;
-        @for $j from 1 through $_max-pages{
-          &:nth-of-type(#{$j}) {
-            display:inherit;
-          }
-        }
-        @include media-breakpoint($_breakpoint){
-          display:none !important;
-        }
-      }
-      &:hover{
-        @extend %#{$component}-background-hover !optional;
-        @extend %#{$component}-border-hover !optional;
-        @extend %#{$component}-font-hover !optional;
-        span{
-          @extend %#{$component}-font-hover !optional;
-        }
-      }
-    }
-  }
-
-  &>page-info{
-    @include flexbox($justification:flex-start,$alignment:center);
-    div{
-      font-size:16px;
-      @include media-breakpoint($_small-breakpoint){
-        font-size:$phone-info-font-size;
-      }
-      @extend %#{$component}-font !optional;
-      text-shadow:none !important;
-      @if $font !=null{
-        font-family:$font;
-      }
-    }
-    span{
-      &[refresh]{
-        margin-left:2em;
-        font-size:32px;
-        @include media-breakpoint($_small-breakpoint){
-          margin-left:.3em;
-        }
-        @extend %#{$component}-icon !optional;
-        text-shadow:none !important;
-        &:hover{
-          @extend %#{$component}-icon-hover !optional;
-          text-shadow:none !important;
-          cursor:pointer;
-        }
-      }
-    }
-  }
-};
-
-/// @access private
-@mixin _flex-grid-columns-breakpoint($breakpoint,$len,$tag,$font,$color){
-  @include media-breakpoint($breakpoint){
-    section {
-      #{$tag} {
-        width:100%;
-        min-width:100%;
-        @for $i from 1 through $len{
-          &:nth-of-type(#{$len}n + #{$i}){
-            &:before{
-              content: attr(data-header);
-              @if $font !=null{
-                font-family:$font;
-              }
-              @if $color !=null{
-                color:$color;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
-/// @access private
-@mixin _flex-grid-touch-columns($breakpoint,$len,$tag,$font,$color){
-
-  &[breakpoint="1024"]{
-    @include _flex-grid-columns-breakpoint(1024px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="900"]{
-    @include _flex-grid-columns-breakpoint(900px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="768"]{
-    @include _flex-grid-columns-breakpoint(768px,$len,$tag,$font,$color);
-  }
-  &[breakpoint="640"]{
-    @include _flex-grid-columns-breakpoint(640px,$len,$tag,$font,$color);
-  }
-}
-
-
-
-
-/// @access private
-@mixin _flex-grid-breakpoint($touch-breakpoint,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-$touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag){
-  @include media-breakpoint($touch-breakpoint){
-    border-radius:$touch-border-radius;
-    &>header{
-      display:none;
-    }
-    section{
-      font-size:$touch-font-size;
-      @include flexbox-column($justification:flex-start,$alignment:flex-start);
-      &>#{$grid-tag}{
-        border-right:0 !important;
-        width:100%;
-        padding:$touch-cell-padding;
-
-        &:nth-of-type(n){
-          background:none;
-          &:before{
-            position:absolute;
-            top:0;
-            left:$touch-header-left;
-            @if $header-color !=null{
-              color:$header-color;
-            }
-            @if $header-font !=null{
-              font-family:$header-font;
-            }
-          }
-        }
-        &:nth-of-type(#{$columns}n+1){
-          margin-top:$touch-cell-margin-top;
-        }
-        &:nth-of-type(#{$columns}n+#{$columns}){
-          padding-bottom:$touch-cell-padding-bottom;
-          border-top:0 !important;
-          border-left:0 !important;
-          border-right:0 !important;
-          border-bottom:$touch-cell-border-bottom !important;
-        }
-        &:last-of-type{
-          border-bottom:0 !important;
-        }
-      }
-    }
-  }
-  @include media-breakpoint(640px){
-    @include _flex-gutter-bleed();
-    border-right:0 !important;
-    border-left:0 !important;
-    padding-left:.5em;
-    section{
-      &>#{$grid-tag}{
-        padding-right:16px;
-        font-size:14px;
-        &:nth-of-type(n){
-          &:before{
-            left:16px;
-          }
-        }
-      }
-    }
-  }
-}
-
-/// @access private
-@mixin _even-cell-alt($columns,$cell-background-alt){
-  @for $i from 1 through $columns{
-    &:nth-of-type(#{2*$columns}n + #{$i + $columns}){
-      background:$cell-background-alt;
-    }
-  }
-}
-
-/// @access private
-@mixin _odd-cell-alt($columns,$cell-background-alt){
-  @for $i from 1 through $columns{
-
-    &:nth-of-type(#{2*$columns}n + #{$i} ){
-      background:$cell-background-alt;
-    }
-  }
-}
-
-/// @access private
-@mixin _flex-grid-columns($columns,$cell-background-alt,$grid-tag){
-  $_column-percentage: columns-to-percentage($columns);
-  &>header{
-    &>*{
-      width:$_column-percentage;
-    }
-  }
-  section{
-    &>#{$grid-tag}{
-      width:$_column-percentage;
-      @for $i from 1 through $columns{
-        &:nth-of-type(#{2*$columns}n + #{$i + $columns}){
-          background:$cell-background-alt;
-        }
-      }
-    }
-  }
-  footer{
-    &>column-footer{
-      width:$_column-percentage;
-    }
-  }
-}
 
 /// @access private
 @mixin _flex-grid($component:null,
 $font-size:null,
 $border-radius:null,
-$columns:null,
 $header-color:null,
 $header-font:null,
 $header-bold:null,
@@ -307,13 +30,10 @@ $touch-cell-padding-bottom:null,
 $touch-cell-margin-top:null,
 $touch-cell-border-bottom:null,
 $touch-font-size:null,
-$touch-border-radius:null,
 $touch-header-left:null,
 $grid-tag:null
 )
 {
-  $_column-percentage: columns-to-percentage($columns);
-  $_max-columns:8;
 
   font-size:$font-size;
   width:100%;
@@ -333,7 +53,6 @@ $grid-tag:null
     &>*{
       position:relative;
       font-size:1em;
-      width:$_column-percentage;
       margin:0;
       border-top:0 !important;
       border-left:0 !important;
@@ -399,21 +118,12 @@ $grid-tag:null
       position:relative;
       padding:$cell-padding;
       min-height:$cell-height;
-      width:$_column-percentage;
       @include flexbox-column($justification:$cell-justification,$alignment:$cell-alignment);
       @if $cell-show-borders==true{
         @extend %#{$component}-border !optional;
         border-top:0 !important;
         border-left:0 !important;
         border-bottom:0 !important;
-        &:nth-of-type(#{$columns}n){
-          border-right:0 !important;
-        }
-      }
-      @if($cell-alt-type==even){
-        @include _even-cell-alt($columns,$cell-background-alt);
-      }@else{
-        @include _odd-cell-alt($columns,$cell-background-alt);
       }
     }
     &:empty{
@@ -428,6 +138,7 @@ $grid-tag:null
 
     }
   }
+
   footer{
     background:$footer-background;
     position:relative;
@@ -442,30 +153,11 @@ $grid-tag:null
       padding:0;
     }
     &>column-footer{
-      width:$_column-percentage;
       padding:$cell-padding;
       min-height:$cell-height;
       max-height:$cell-height;
       overflow:hidden;
     }
-  }
-
-  &[breakpoint="1024"]{
-    @include _flex-grid-breakpoint(1024px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
-
-  &[breakpoint="900"]{
-    @include _flex-grid-breakpoint(900px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
-  &[breakpoint="768"]{
-    @include _flex-grid-breakpoint(768px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
-  }
-  &[breakpoint="640"]{
-    @include _flex-grid-breakpoint(640px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
-            $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-border-radius,$touch-header-left,$grid-tag);
   }
 
 }
@@ -474,13 +166,13 @@ $grid-tag:null
 /// @param {String} $component
 /// @param {List} $tags
 /// @param {String} $class
-/// @param {List} $columns
 /// @param {Map} $map
 ///  $map:(
+///   tag:<value>,
 ///   breakpoint:<value>,
 ///   font-size:<value>,
 ///   border-radius:<value>,
-///   columns:<value>,
+///   max-columns:<value>,
 ///   justification:<value>,
 ///   alignment:<value>,
 ///   column-count,
@@ -494,6 +186,7 @@ $grid-tag:null
 ///       icon-down:<value>
 ///   ),
 ///   cell:(
+///        tag:<value>,
 ///        background:<value>,
 ///        justification:<value>,
 ///        alignment:<value>,
@@ -508,7 +201,6 @@ $grid-tag:null
 ///        background:<value>
 ///   ),
 ///   touch:(
-///        breakpoint:<value>,
 ///        cell-padding:<value>,
 ///        cell-padding-bottom:<value>,
 ///        cell-margin-top:<value>,
@@ -522,11 +214,12 @@ $grid-tag:null
 /// )
 @mixin flex-grid($component:css-flex-grid,$tags:(),$class:null,$map:()){
 
+  $_tag:map-get-default($map,tag,flex-grid);
+  $_item-tag:map-nested-get-default($map,cell,tag,grid-item);
   $_white:#fff;
   $_icon-font-family:content;
-
-  $_columns:map-get-default($map,columns,4);
-  $touch-breakpoint:map-get-default($map,breakpoint,750px);
+  $_max-columns:map-get-default($map,max-columns,10);
+  $breakpoint:map-get-default($map,breakpoint,null);
   $font-size:map-get-default($map,font-size,1em);
   $border-radius:map-get-default($map,border-radius,0);
   $header-background:map-nested-get-default($map,header,background,$_white);
@@ -557,49 +250,37 @@ $grid-tag:null
   $touch-header-font:map-nested-get($map,touch,header-font);
   $touch-header-font-color:map-nested-get($map,touch,header-font-color);
 
-  $tag:flex-grid;
+  $tag:$_tag;
   @include element-tag($tag:$tag,$tags:$tags,$class:$class){
-    @include _flex-grid($component,$font-size,$border-radius,$_columns,$header-color,$header-font,$header-bold,$header-background,$header-icon-font,$header-icon-up,$header-icon-down,
+    @include _flex-grid($component,$font-size,$border-radius,$header-color,$header-font,$header-bold,$header-background,$header-icon-font,$header-icon-up,$header-icon-down,
             $justification,$alignment,$cell-justification,$cell-alignment,$cell-padding,$cell-height,$cell-show-borders,$cell-background,$cell-background-alt,$cell-alt-type,
-            $footer-background, $touch-breakpoint, $touch-cell-padding,$touch-cell-padding-bottom,$touch-cell-margin-top,$touch-cell-border-bottom,
-            $touch-font-size,$touch-border-radius,$touch-header-left,grid-item);
+            $footer-background, $breakpoint, $touch-cell-padding,$touch-cell-padding-bottom,$touch-cell-margin-top,$touch-cell-border-bottom,
+            $touch-font-size,$touch-header-left,$_item-tag);
     @content;
 
-    $_max-columns:10;
     @for $j from 2 through $_max-columns{
       &[columns="#{$j}"]{
-        @include _flex-grid-touch-columns($touch-breakpoint,$j,grid-item,$touch-header-font,$touch-header-font-color);
+        @include _flex-grid-column-widths($j,$cell-background-alt,$_item-tag,$cell-show-borders);
+        @include _flex-grid-touch-columns($breakpoint,$j,$_item-tag,$touch-header-font,$touch-header-font-color);
+        @include _flex-grid-touch-sections($breakpoint,$touch-cell-padding,$j,$touch-cell-padding-bottom,$touch-cell-margin-top,
+                $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-header-left,$_item-tag);
+
+        &[alt-background="even"]{
+          @include _flex-grid-section-even-alt-background($_item-tag,$j,$cell-background-alt);
+        }
+
+        &[alt-background="odd"]{
+          @include _flex-grid-section-odd-alt-background($_item-tag,$j,$cell-background-alt)
+        }
+
       }
     }
 
+    @include _flex-grid-touch-header($breakpoint,$touch-border-radius);
+
+    @include _phone-grid($_item-tag);
+
   }
 }
 
 
-/// @access public
-/// @param {String} $component
-/// @param {List} $tags
-/// @param {String} $class
-/// @param {Map} $map
-///  $map:(
-///   border-radius:<value>,
-///   margin-right:<value>,
-///   show-pages-border:<value>,
-///   font:<value>,
-///   phone:(
-///     info-font-size:<value>
-///   )
-/// )
-@mixin grid-pagination($component:css-grid-pagination,$tags:null,$class:null,$map:()){
-
-  $border-radius:map-get-default($map,border-radius,50%);
-  $margin-right:map-get-default($map,margin-right,.25em);
-  $show-pages-border:map-get-default($map,show-pages-border,false);
-  $font:map-get($map,font);
-  $phone-info-font-size:map-nested-get-default($map,phone,info-font-size,14px);
-  $tag:grid-pagination;
-  @include element-tag($tag:$tag,$tags:$tags,$class:$class){
-    @include _grid-pagination($component,$border-radius,$margin-right,$show-pages-border,$font,$phone-info-font-size);
-    @content;
-  }
-}
