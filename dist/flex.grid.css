@@ -1,7 +1,7 @@
 flex-grid > header > *.up:after, flex-grid > header > *.down:after {
   text-shadow: none; }
 
-flex-grid, flex-grid > header, flex-grid > header h6, flex-grid footer {
+flex-grid, flex-grid > header, flex-grid > header h6, flex-grid footer, flex-grid[borders=true] section {
   border: 1px solid;
   border-color: #dfdfdf; }
 
@@ -140,6 +140,10 @@ flex-grid {
       min-height: 40px;
       max-height: 40px;
       overflow: hidden; }
+  flex-grid[borders=true] section {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important; }
   flex-grid[columns="2"] > header > * {
     width: 50%; }
   flex-grid[columns="2"] section > grid-item {

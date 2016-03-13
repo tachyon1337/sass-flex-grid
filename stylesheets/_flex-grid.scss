@@ -160,6 +160,15 @@ $grid-tag:null
     }
   }
 
+  &[borders=true]{
+    section{
+      @extend %#{$component}-border !optional;
+      border-top:0 !important;
+      border-left:0 !important;
+      border-bottom:0 !important;
+    }
+  }
+
 }
 
 /// @access public
