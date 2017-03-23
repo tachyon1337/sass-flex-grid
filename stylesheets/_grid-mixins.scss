@@ -205,7 +205,7 @@ $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-hea
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-header-left,$grid-tag);
   }
   &[breakpoint="900"]{
-    @include _flex-grid-section-breakpoint(800px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
+    @include _flex-grid-section-breakpoint(900px,$touch-cell-padding,$columns,$touch-cell-padding-bottom,$touch-cell-margin-top,
             $touch-cell-border-bottom,$touch-font-size,$header-font,$header-color,$touch-header-left,$grid-tag);
   }
   &[breakpoint="768"]{

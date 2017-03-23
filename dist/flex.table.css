@@ -190,7 +190,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="2"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="2"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -376,7 +376,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="3"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="3"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -574,7 +574,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="4"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="4"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -784,7 +784,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="5"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="5"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1006,7 +1006,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="6"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="6"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1240,7 +1240,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="7"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="7"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1486,7 +1486,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="8"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="8"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1744,7 +1744,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="9"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="9"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -2014,7 +2014,7 @@ flex-table {
           border-bottom: 1px solid #ddd !important; }
         flex-table[columns="10"][breakpoint="1024"] section > cell-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-table[columns="10"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;

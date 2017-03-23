@@ -215,7 +215,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="2"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="2"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -401,7 +401,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="3"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="3"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -599,7 +599,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="4"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="4"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -809,7 +809,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="5"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="5"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1031,7 +1031,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="6"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="6"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1265,7 +1265,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="7"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="7"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1511,7 +1511,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="8"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="8"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -1769,7 +1769,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="9"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="9"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
@@ -2039,7 +2039,7 @@ flex-grid {
           border-bottom: 1px solid #ddd !important; }
         flex-grid[columns="10"][breakpoint="1024"] section > grid-item:last-of-type {
           border-bottom: 0 !important; } }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-grid[columns="10"][breakpoint="900"] section {
       font-size: 16px;
       display: -webkit-flex;
