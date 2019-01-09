@@ -75,6 +75,9 @@ $grid-tag:null
       &[sortable]{
         cursor:pointer;
       }
+      &[sortable=true]{
+        cursor:pointer;
+      }
       &>.label{
         overflow:hidden;
         max-height:.85*$cell-height;
@@ -149,6 +152,10 @@ $grid-tag:null
     border-left:0 !important;
     border-bottom:0 !important;
     &[flex]{
+      @include flexbox($justification:$justification,$alignment:$alignment);
+      padding:0;
+    }
+     &[flex=true]{
       @include flexbox($justification:$justification,$alignment:$alignment);
       padding:0;
     }
